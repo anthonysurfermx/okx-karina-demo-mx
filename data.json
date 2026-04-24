@@ -1,0 +1,1880 @@
+{
+  "generated_at": "2026-04-24T15:36:50.579735+00:00",
+  "report_week": "2026-W17",
+  "mx": [
+    {
+      "nickname": "@mattunchi",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "youtube",
+      "profile_url": "https://www.youtube.com/@MADCRIPTOMX",
+      "evidence": [
+        "MAD Cripto MX (Mateo) en YouTube · 108,000 seguidores",
+        "Contenido: educación crypto general y análisis de proyectos / DeFi",
+        "Uno de los YouTubers crypto mexicanos con mayor subscriber base; historial de cobertura de nuevos exchanges; propuso contenido educativo patrocinado en Polkassembly."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 108000,
+        "engagement_rate": 0.035,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 4,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.86125,
+      "primary_score": 0.86125,
+      "tier_label": "🔥 VIP",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_mattunchi",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_mattunchi_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "MAD Cripto MX (Mateo) en YouTube · 108,000 seguidores",
+                "Contenido: educación crypto general y análisis de proyectos / DeFi",
+                "Uno de los YouTubers crypto mexicanos con mayor subscriber base; historial de cobertura de nuevos exchanges; propuso contenido educativo patrocinado en Polkassembly."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 108000,
+                "engagement_rate": 0.035,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 4,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.8612,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.youtube.com/@MADCRIPTOMX",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:mattunchi",
+          "source_platform": "airtable",
+          "username": "@mattunchi",
+          "display_name": "@mattunchi",
+          "trading_profile_id": "https://www.youtube.com/@MADCRIPTOMX"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@espaciocriptopodcast",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "youtube",
+      "profile_url": "https://www.youtube.com/@espaciocriptopodcast",
+      "evidence": [
+        "Espacio Cripto (Abraham Cobos + Lalo García) en YouTube · 62,000 seguidores",
+        "Contenido: educación para principiantes + entrevistas Web3 LATAM",
+        "Podcast crypto más escuchado LATAM; lanzó Startup House con StarkNet en Monterrey; alcance institucional MX alto."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 62000,
+        "engagement_rate": 0.035,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 4,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.86125,
+      "primary_score": 0.86125,
+      "tier_label": "🔥 VIP",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_espaciocriptopodcast",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_espaciocriptopodcast_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Espacio Cripto (Abraham Cobos + Lalo García) en YouTube · 62,000 seguidores",
+                "Contenido: educación para principiantes + entrevistas Web3 LATAM",
+                "Podcast crypto más escuchado LATAM; lanzó Startup House con StarkNet en Monterrey; alcance institucional MX alto."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 62000,
+                "engagement_rate": 0.035,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 4,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.8612,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.youtube.com/@espaciocriptopodcast",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:espaciocriptopodcast",
+          "source_platform": "airtable",
+          "username": "@espaciocriptopodcast",
+          "display_name": "@espaciocriptopodcast",
+          "trading_profile_id": "https://www.youtube.com/@espaciocriptopodcast"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@LunaticoCrypto",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "youtube",
+      "profile_url": "https://www.youtube.com/@LunaticoCrypto",
+      "evidence": [
+        "Lunatico Crypto en YouTube · 40,000 seguidores",
+        "Contenido: análisis técnico, calls de mercado en vivo, trading spot/futuros MX",
+        "Trader con calls públicas verificables; audiencia retail trader MX-centric; perfil natural para referir a OKX futuros. Verificar handle antes de outreach."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 40000,
+        "engagement_rate": 0.035,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 3,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.7959722222222222,
+      "primary_score": 0.7959722222222222,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_LunaticoCrypto",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_LunaticoCrypto_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Lunatico Crypto en YouTube · 40,000 seguidores",
+                "Contenido: análisis técnico, calls de mercado en vivo, trading spot/futuros MX",
+                "Trader con calls públicas verificables; audiencia retail trader MX-centric; perfil natural para referir a OKX futuros. Verificar handle antes de outreach."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 40000,
+                "engagement_rate": 0.035,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 3,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.796,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.youtube.com/@LunaticoCrypto",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:LunaticoCrypto",
+          "source_platform": "airtable",
+          "username": "@LunaticoCrypto",
+          "display_name": "@LunaticoCrypto",
+          "trading_profile_id": "https://www.youtube.com/@LunaticoCrypto"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@criptozky",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "youtube",
+      "profile_url": "https://www.youtube.com/c/YoungWolvesCripto",
+      "evidence": [
+        "Criptozky (César Ozky Cosío) en YouTube · 155,000 seguidores",
+        "Contenido: trading técnico + DeFi + liderazgo/negocios",
+        "Top-50 business MX; cruza audiencia de trader y empresario — perfil institutional VIP."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 155000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 4,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.78625,
+      "primary_score": 0.78625,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_criptozky",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_criptozky_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Criptozky (César Ozky Cosío) en YouTube · 155,000 seguidores",
+                "Contenido: trading técnico + DeFi + liderazgo/negocios",
+                "Top-50 business MX; cruza audiencia de trader y empresario — perfil institutional VIP."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 155000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 4,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7863,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.youtube.com/c/YoungWolvesCripto",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:criptozky",
+          "source_platform": "airtable",
+          "username": "@criptozky",
+          "display_name": "@criptozky",
+          "trading_profile_id": "https://www.youtube.com/c/YoungWolvesCripto"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@albertohortabtc",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@albertohortabtc",
+      "evidence": [
+        "Alberto Horta en TikTok · 234,000 seguidores",
+        "Contenido: trading técnico + forex + automatización",
+        "Base Querétaro; founder Horta Technologies; ER 1.07% sobre 234K indica audiencia cualificada (trader activo, no retail puro)."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 234000,
+        "engagement_rate": 0.035,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 2,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.78625,
+      "primary_score": 0.78625,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_albertohortabtc",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_albertohortabtc_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Alberto Horta en TikTok · 234,000 seguidores",
+                "Contenido: trading técnico + forex + automatización",
+                "Base Querétaro; founder Horta Technologies; ER 1.07% sobre 234K indica audiencia cualificada (trader activo, no retail puro)."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 234000,
+                "engagement_rate": 0.035,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 2,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7863,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@albertohortabtc",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:albertohortabtc",
+          "source_platform": "airtable",
+          "username": "@albertohortabtc",
+          "display_name": "@albertohortabtc",
+          "trading_profile_id": "https://www.tiktok.com/@albertohortabtc"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@cryptosanti",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@cryptosanti",
+      "evidence": [
+        "Crypto Santi en TikTok · 913,000 seguidores",
+        "Contenido: educación para principiantes + estrategias de inversión MX",
+        "ER 1.36% sobre 913K es notablemente alto para TikTok crypto MX; conversión potencial por engagement."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 913000,
+        "engagement_rate": 0.035,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 1,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.74875,
+      "primary_score": 0.74875,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_cryptosanti",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_cryptosanti_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Crypto Santi en TikTok · 913,000 seguidores",
+                "Contenido: educación para principiantes + estrategias de inversión MX",
+                "ER 1.36% sobre 913K es notablemente alto para TikTok crypto MX; conversión potencial por engagement."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 913000,
+                "engagement_rate": 0.035,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 1,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7488,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@cryptosanti",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:cryptosanti",
+          "source_platform": "airtable",
+          "username": "@cryptosanti",
+          "display_name": "@cryptosanti",
+          "trading_profile_id": "https://www.tiktok.com/@cryptosanti"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@futurosmillonarios",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "youtube",
+      "profile_url": "https://www.youtube.com/channel/UCHwDVTt8ksobbhMQXCwo0Jw",
+      "evidence": [
+        "Futuros Millonarios en YouTube · 382,000 seguidores",
+        "Contenido: educación crypto + memecoins + ingreso pasivo",
+        "YT subs >380K + cobertura constante de memecoins y narrativas de ciclo; tráfico retail masivo."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 382000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 3,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.74875,
+      "primary_score": 0.74875,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_futurosmillonarios",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_futurosmillonarios_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Futuros Millonarios en YouTube · 382,000 seguidores",
+                "Contenido: educación crypto + memecoins + ingreso pasivo",
+                "YT subs >380K + cobertura constante de memecoins y narrativas de ciclo; tráfico retail masivo."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 382000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 3,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7488,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.youtube.com/channel/UCHwDVTt8ksobbhMQXCwo0Jw",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:futurosmillonarios",
+          "source_platform": "airtable",
+          "username": "@futurosmillonarios",
+          "display_name": "@futurosmillonarios",
+          "trading_profile_id": "https://www.youtube.com/channel/UCHwDVTt8ksobbhMQXCwo0Jw"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@eduardoaranda",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@eduardoaranda",
+      "evidence": [
+        "Eduardo Aranda en TikTok · 208,000 seguidores",
+        "Contenido: educación crypto MX",
+        "ER 1.95% más alto del top-10 MX TikTok — audiencia pequeña pero extremadamente activa, buen fit para programa de referidos."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 208000,
+        "engagement_rate": 0.035,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 1,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.74875,
+      "primary_score": 0.74875,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_eduardoaranda",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_eduardoaranda_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Eduardo Aranda en TikTok · 208,000 seguidores",
+                "Contenido: educación crypto MX",
+                "ER 1.95% más alto del top-10 MX TikTok — audiencia pequeña pero extremadamente activa, buen fit para programa de referidos."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 208000,
+                "engagement_rate": 0.035,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 1,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7488,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@eduardoaranda",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:eduardoaranda",
+          "source_platform": "airtable",
+          "username": "@eduardoaranda",
+          "display_name": "@eduardoaranda",
+          "trading_profile_id": "https://www.tiktok.com/@eduardoaranda"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@diariobitcoin",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "x",
+      "profile_url": "https://x.com/diariobitcoin",
+      "evidence": [
+        "DiarioBitcoin (media) en X/Twitter · 95,000 seguidores",
+        "Contenido: periodismo crypto hispano, cobertura MX/LATAM, regulación, exchanges",
+        "Medio crypto hispanohablante con presencia MX; canal de placement editorial + amplificación de anuncios OKX."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 95000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 3,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.74875,
+      "primary_score": 0.74875,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_diariobitcoin",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_diariobitcoin_stat",
+            "kind": "stat",
+            "source_platform": "x",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "DiarioBitcoin (media) en X/Twitter · 95,000 seguidores",
+                "Contenido: periodismo crypto hispano, cobertura MX/LATAM, regulación, exchanges",
+                "Medio crypto hispanohablante con presencia MX; canal de placement editorial + amplificación de anuncios OKX."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 95000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 3,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7488,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://x.com/diariobitcoin",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:diariobitcoin",
+          "source_platform": "x",
+          "username": "@diariobitcoin",
+          "display_name": "@diariobitcoin",
+          "trading_profile_id": "https://x.com/diariobitcoin"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@espejelomar",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "x",
+      "profile_url": "https://x.com/espejelomar",
+      "evidence": [
+        "Omar Espejel en X/Twitter · 32,000 seguidores",
+        "Contenido: DeFi / infra Ethereum + Starknet + BTCFi",
+        "Sr. DevAdvocate Starknet Foundation, host de 'Hacia Afuera' podcast técnico; puerta a developer ecosystem MX para narrativas institucionales."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 32000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 4,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.73625,
+      "primary_score": 0.73625,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_espejelomar",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_espejelomar_stat",
+            "kind": "stat",
+            "source_platform": "x",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Omar Espejel en X/Twitter · 32,000 seguidores",
+                "Contenido: DeFi / infra Ethereum + Starknet + BTCFi",
+                "Sr. DevAdvocate Starknet Foundation, host de 'Hacia Afuera' podcast técnico; puerta a developer ecosystem MX para narrativas institucionales."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 32000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 4,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7362,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://x.com/espejelomar",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:espejelomar",
+          "source_platform": "x",
+          "username": "@espejelomar",
+          "display_name": "@espejelomar",
+          "trading_profile_id": "https://x.com/espejelomar"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@abrahamcr",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "x",
+      "profile_url": "https://x.com/abrahamcr",
+      "evidence": [
+        "Abraham Cobos en X/Twitter · 23,000 seguidores",
+        "Contenido: Web3 / DeFi / builder-voice LATAM",
+        "Co-founder/CEO de Bando y host de Espacio Cripto; voz builder MX con reach a devs y founders (audiencia técnica que OKX no captura vía TikTok)."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 23000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 4,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.7112499999999999,
+      "primary_score": 0.7112499999999999,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_abrahamcr",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_abrahamcr_stat",
+            "kind": "stat",
+            "source_platform": "x",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Abraham Cobos en X/Twitter · 23,000 seguidores",
+                "Contenido: Web3 / DeFi / builder-voice LATAM",
+                "Co-founder/CEO de Bando y host de Espacio Cripto; voz builder MX con reach a devs y founders (audiencia técnica que OKX no captura vía TikTok)."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 23000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 4,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7112,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://x.com/abrahamcr",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:abrahamcr",
+          "source_platform": "x",
+          "username": "@abrahamcr",
+          "display_name": "@abrahamcr",
+          "trading_profile_id": "https://x.com/abrahamcr"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@cryptojuancho",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@cryptojuancho",
+      "evidence": [
+        "Crypto Juancho en TikTok · 1,300,000 seguidores",
+        "Contenido: educación para principiantes — portfolio, risk management, long-term",
+        "TikToker crypto MX 1M+; audiencia joven retail — match con perfil VIP que OKX busca escalar en LATAM."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 1300000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 2,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.7112499999999999,
+      "primary_score": 0.7112499999999999,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_cryptojuancho",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_cryptojuancho_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Crypto Juancho en TikTok · 1,300,000 seguidores",
+                "Contenido: educación para principiantes — portfolio, risk management, long-term",
+                "TikToker crypto MX 1M+; audiencia joven retail — match con perfil VIP que OKX busca escalar en LATAM."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 1300000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 2,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7112,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@cryptojuancho",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:cryptojuancho",
+          "source_platform": "airtable",
+          "username": "@cryptojuancho",
+          "display_name": "@cryptojuancho",
+          "trading_profile_id": "https://www.tiktok.com/@cryptojuancho"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@LOReBitcoin",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "x",
+      "profile_url": "https://x.com/lorebitcoin",
+      "evidence": [
+        "Lorena Ortiz en X/Twitter · 8,300 seguidores",
+        "Contenido: bitcoin maximalist / educación CDMX / eventos comunidad",
+        "Co-founder del Bitcoin Embassy Bar CDMX; hub físico de la comunidad BTC MX; influencia offline."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 8300,
+        "engagement_rate": 0.035,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 3,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.7079166666666666,
+      "primary_score": 0.7079166666666666,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_LOReBitcoin",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_LOReBitcoin_stat",
+            "kind": "stat",
+            "source_platform": "x",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Lorena Ortiz en X/Twitter · 8,300 seguidores",
+                "Contenido: bitcoin maximalist / educación CDMX / eventos comunidad",
+                "Co-founder del Bitcoin Embassy Bar CDMX; hub físico de la comunidad BTC MX; influencia offline."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 8300,
+                "engagement_rate": 0.035,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 3,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.7079,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://x.com/lorebitcoin",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:LOReBitcoin",
+          "source_platform": "x",
+          "username": "@LOReBitcoin",
+          "display_name": "@LOReBitcoin",
+          "trading_profile_id": "https://x.com/lorebitcoin"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@elocadenas",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "x",
+      "profile_url": "https://x.com/elocadenas",
+      "evidence": [
+        "Eloísa Cadenas en X/Twitter · 18,500 seguidores",
+        "Contenido: análisis macro / regulación / CBDC / academia",
+        "PhD UNAM, founder CryptoFintech, co-founder PXO (primer stablecoin MX), columnista Cointelegraph; legitimidad regulatoria ante CNBV."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 18500,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 4,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.69875,
+      "primary_score": 0.69875,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_elocadenas",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_elocadenas_stat",
+            "kind": "stat",
+            "source_platform": "x",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Eloísa Cadenas en X/Twitter · 18,500 seguidores",
+                "Contenido: análisis macro / regulación / CBDC / academia",
+                "PhD UNAM, founder CryptoFintech, co-founder PXO (primer stablecoin MX), columnista Cointelegraph; legitimidad regulatoria ante CNBV."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 18500,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 4,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.6987,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://x.com/elocadenas",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:elocadenas",
+          "source_platform": "x",
+          "username": "@elocadenas",
+          "display_name": "@elocadenas",
+          "trading_profile_id": "https://x.com/elocadenas"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@jorgecuervo1641",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "youtube",
+      "profile_url": "https://www.youtube.com/@jorgecuervo1641",
+      "evidence": [
+        "Jorge Cuervo (CryptoAnálisis) en YouTube · 42,000 seguidores",
+        "Contenido: trading técnico — AT/AF de bitcoin y alts",
+        "Perfil trader técnico dedicado — audiencia que hace >1 trade/semana, alto LTV para exchange."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 42000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 2,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.6890277777777778,
+      "primary_score": 0.6890277777777778,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_jorgecuervo1641",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_jorgecuervo1641_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Jorge Cuervo (CryptoAnálisis) en YouTube · 42,000 seguidores",
+                "Contenido: trading técnico — AT/AF de bitcoin y alts",
+                "Perfil trader técnico dedicado — audiencia que hace >1 trade/semana, alto LTV para exchange."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 42000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 2,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.689,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.youtube.com/@jorgecuervo1641",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:jorgecuervo1641",
+          "source_platform": "airtable",
+          "username": "@jorgecuervo1641",
+          "display_name": "@jorgecuervo1641",
+          "trading_profile_id": "https://www.youtube.com/@jorgecuervo1641"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@danielvogel",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "x",
+      "profile_url": "https://x.com/danielvogel",
+      "evidence": [
+        "Daniel Vogel (Bitso CEO & co-founder) en X/Twitter · 35,000 seguidores",
+        "Contenido: policy LATAM, remesas, rails stablecoin, adopción institucional",
+        "Founder crypto MX más visible; su señal mueve conversación builder/VIP. Competitor-adjacent — relación más de ecosystem que de conversión directa."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 35000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 2,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.6695833333333333,
+      "primary_score": 0.6695833333333333,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_danielvogel",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_danielvogel_stat",
+            "kind": "stat",
+            "source_platform": "x",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Daniel Vogel (Bitso CEO & co-founder) en X/Twitter · 35,000 seguidores",
+                "Contenido: policy LATAM, remesas, rails stablecoin, adopción institucional",
+                "Founder crypto MX más visible; su señal mueve conversación builder/VIP. Competitor-adjacent — relación más de ecosystem que de conversión directa."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 35000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 2,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.6696,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://x.com/danielvogel",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:danielvogel",
+          "source_platform": "x",
+          "username": "@danielvogel",
+          "display_name": "@danielvogel",
+          "trading_profile_id": "https://x.com/danielvogel"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@ricardoramirezmx",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@ricardoramirezmx",
+      "evidence": [
+        "Ricardo Ramírez (RickyCryptoJunkie) en TikTok · 1,300,000 seguidores",
+        "Contenido: trading técnico — TA de BTC/ETH/altcoins",
+        "Multiplataforma (TikTok 1.3M + IG 81K + YT 51K); trader serio, fit perfecto para producto futures/perpetuals de OKX."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 1300000,
+        "engagement_rate": 0.005,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 3,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.655,
+      "primary_score": 0.655,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_ricardoramirezmx",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_ricardoramirezmx_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Ricardo Ramírez (RickyCryptoJunkie) en TikTok · 1,300,000 seguidores",
+                "Contenido: trading técnico — TA de BTC/ETH/altcoins",
+                "Multiplataforma (TikTok 1.3M + IG 81K + YT 51K); trader serio, fit perfecto para producto futures/perpetuals de OKX."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 1300000,
+                "engagement_rate": 0.005,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 3,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.655,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@ricardoramirezmx",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:ricardoramirezmx",
+          "source_platform": "airtable",
+          "username": "@ricardoramirezmx",
+          "display_name": "@ricardoramirezmx",
+          "trading_profile_id": "https://www.tiktok.com/@ricardoramirezmx"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@pachorro",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "x",
+      "profile_url": "https://x.com/pachorro",
+      "evidence": [
+        "Pablo González (Bitso co-founder) en X/Twitter · 28,000 seguidores",
+        "Contenido: product/regulation commentary, LATAM crypto adoption, stablecoins",
+        "Co-founder de Bitso; alta credibilidad con founders y builders MX. Competitor-adjacent — handle con cuidado, alto valor de relación estratégica."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 28000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 2,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.6501388888888888,
+      "primary_score": 0.6501388888888888,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_pachorro",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_pachorro_stat",
+            "kind": "stat",
+            "source_platform": "x",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Pablo González (Bitso co-founder) en X/Twitter · 28,000 seguidores",
+                "Contenido: product/regulation commentary, LATAM crypto adoption, stablecoins",
+                "Co-founder de Bitso; alta credibilidad con founders y builders MX. Competitor-adjacent — handle con cuidado, alto valor de relación estratégica."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 28000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 2,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.6501,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://x.com/pachorro",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:pachorro",
+          "source_platform": "x",
+          "username": "@pachorro",
+          "display_name": "@pachorro",
+          "trading_profile_id": "https://x.com/pachorro"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@androxmx",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@androxmx",
+      "evidence": [
+        "Androxmx en TikTok · 409,000 seguidores",
+        "Contenido: gaming + crypto crossover",
+        "Streamer gaming con interés crypto — audiencia gamer MX (overlapping con GameFi/NFT de OKX)."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 409000,
+        "engagement_rate": 0.005,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 2,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.6174999999999999,
+      "primary_score": 0.6174999999999999,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_androxmx",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_androxmx_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Androxmx en TikTok · 409,000 seguidores",
+                "Contenido: gaming + crypto crossover",
+                "Streamer gaming con interés crypto — audiencia gamer MX (overlapping con GameFi/NFT de OKX)."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 409000,
+                "engagement_rate": 0.005,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 2,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.6175,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@androxmx",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:androxmx",
+          "source_platform": "airtable",
+          "username": "@androxmx",
+          "display_name": "@androxmx",
+          "trading_profile_id": "https://www.tiktok.com/@androxmx"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@jjchagerben",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@jjchagerben.753",
+      "evidence": [
+        "JJ Chagerben en TikTok · 517,000 seguidores",
+        "Contenido: bitcoin maximalist / libertad financiera / macro",
+        "Autor ('Invertir en Bitcoin o Esclavitud'); audiencia adulta MX, complementa el mix TikTok con perfil maximalist."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 517000,
+        "engagement_rate": 0.005,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 2,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.6174999999999999,
+      "primary_score": 0.6174999999999999,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_jjchagerben",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_jjchagerben_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "JJ Chagerben en TikTok · 517,000 seguidores",
+                "Contenido: bitcoin maximalist / libertad financiera / macro",
+                "Autor ('Invertir en Bitcoin o Esclavitud'); audiencia adulta MX, complementa el mix TikTok con perfil maximalist."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 517000,
+                "engagement_rate": 0.005,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 2,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.6175,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@jjchagerben.753",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:jjchagerben",
+          "source_platform": "airtable",
+          "username": "@jjchagerben",
+          "display_name": "@jjchagerben",
+          "trading_profile_id": "https://www.tiktok.com/@jjchagerben.753"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@CriptoMEXsegun",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "x",
+      "profile_url": "https://x.com/CriptoMEXsegun",
+      "evidence": [
+        "CriptoMEX en X/Twitter · 15,000 seguidores",
+        "Contenido: análisis altcoins y entradas/salidas de mercado",
+        "Marca MX específica; nicho altcoin-calls — uso directo del producto spot+perps de OKX."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 15000,
+        "engagement_rate": 0.015,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 2,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.6140277777777777,
+      "primary_score": 0.6140277777777777,
+      "tier_label": "⚡ Oportunidad",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_CriptoMEXsegun",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_CriptoMEXsegun_stat",
+            "kind": "stat",
+            "source_platform": "x",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "CriptoMEX en X/Twitter · 15,000 seguidores",
+                "Contenido: análisis altcoins y entradas/salidas de mercado",
+                "Marca MX específica; nicho altcoin-calls — uso directo del producto spot+perps de OKX."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 15000,
+                "engagement_rate": 0.015,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 2,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.614,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://x.com/CriptoMEXsegun",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:CriptoMEXsegun",
+          "source_platform": "x",
+          "username": "@CriptoMEXsegun",
+          "display_name": "@CriptoMEXsegun",
+          "trading_profile_id": "https://x.com/CriptoMEXsegun"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@gabocryptoken",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@gabocryptoken",
+      "evidence": [
+        "Gabo CrypToken en TikTok · 226,000 seguidores",
+        "Contenido: educación blockchain + mentoría 1:1",
+        "Opera mentorías pagadas — ya monetiza audiencia, conversión a programa KOL/revshare más probable."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 226000,
+        "engagement_rate": 0.005,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 1,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.58,
+      "primary_score": 0.58,
+      "tier_label": "🧊 Base",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_gabocryptoken",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_gabocryptoken_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Gabo CrypToken en TikTok · 226,000 seguidores",
+                "Contenido: educación blockchain + mentoría 1:1",
+                "Opera mentorías pagadas — ya monetiza audiencia, conversión a programa KOL/revshare más probable."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 226000,
+                "engagement_rate": 0.005,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 1,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.58,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@gabocryptoken",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:gabocryptoken",
+          "source_platform": "airtable",
+          "username": "@gabocryptoken",
+          "display_name": "@gabocryptoken",
+          "trading_profile_id": "https://www.tiktok.com/@gabocryptoken"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@adriangolub",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@adriangolub",
+      "evidence": [
+        "Adrián Golub en TikTok · 211,000 seguidores",
+        "Contenido: trading técnico MX",
+        "Top-10 HiveInfluence MX crypto TikTok; cobertura conservadora."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 211000,
+        "engagement_rate": 0.005,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 1,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.58,
+      "primary_score": 0.58,
+      "tier_label": "🧊 Base",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_adriangolub",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_adriangolub_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Adrián Golub en TikTok · 211,000 seguidores",
+                "Contenido: trading técnico MX",
+                "Top-10 HiveInfluence MX crypto TikTok; cobertura conservadora."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 211000,
+                "engagement_rate": 0.005,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 1,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.58,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@adriangolub",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:adriangolub",
+          "source_platform": "airtable",
+          "username": "@adriangolub",
+          "display_name": "@adriangolub",
+          "trading_profile_id": "https://www.tiktok.com/@adriangolub"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "@arivera.97",
+      "origin": "real_kol",
+      "country": "MX",
+      "kind": "KOL",
+      "source_platform": "tiktok",
+      "profile_url": "https://www.tiktok.com/@arivera.97",
+      "evidence": [
+        "Alejandro Rivera en TikTok · 221,000 seguidores",
+        "Contenido: trading crypto MX",
+        "Top-10 HiveInfluence MX; candidato de segundo tier para escalamiento del pipeline."
+      ],
+      "vip_features": {},
+      "kol_features": {
+        "follower_count": 221000,
+        "engagement_rate": 0.005,
+        "post_frequency_30d": 14,
+        "cross_platform_presence": 1,
+        "engagement_authenticity_score": 0.85
+      },
+      "vip_score": 0.0,
+      "kol_score": 0.58,
+      "primary_score": 0.58,
+      "tier_label": "🧊 Base",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_arivera_97",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_arivera_97_stat",
+            "kind": "stat",
+            "source_platform": "airtable",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Alejandro Rivera en TikTok · 221,000 seguidores",
+                "Contenido: trading crypto MX",
+                "Top-10 HiveInfluence MX; candidato de segundo tier para escalamiento del pipeline."
+              ],
+              "vip_features": {},
+              "kol_features": {
+                "follower_count": 221000,
+                "engagement_rate": 0.005,
+                "post_frequency_30d": 14,
+                "cross_platform_presence": 1,
+                "engagement_authenticity_score": 0.85
+              },
+              "vip_score": 0.0,
+              "kol_score": 0.58,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.tiktok.com/@arivera.97",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:arivera_97",
+          "source_platform": "airtable",
+          "username": "@arivera.97",
+          "display_name": "@arivera.97",
+          "trading_profile_id": "https://www.tiktok.com/@arivera.97"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    },
+    {
+      "nickname": "CryptoKing_MX",
+      "origin": "fixture",
+      "country": "MX",
+      "kind": "VIP",
+      "source_platform": "binance",
+      "profile_url": "https://www.binance.com/en/copy-trading/lead-details?portfolioId=3721834591234567",
+      "evidence": [
+        "Copy-trading líder en Binance con 412 copiers activos",
+        "ROI 30d de 41.7% y Sharpe 1.82",
+        "AUM declarado $127,500 USD"
+      ],
+      "vip_features": {
+        "aum_usd": 127500.43,
+        "copier_count": 412,
+        "roi_30d": 0.4173,
+        "win_rate": 0.621
+      },
+      "kol_features": {},
+      "vip_score": 0.45214346233333336,
+      "kol_score": 0.0,
+      "primary_score": 0.45214346233333336,
+      "tier_label": "🧊 Base",
+      "confidence_label": "🟢 Identidad Confirmada",
+      "confidence_band": "green",
+      "identity_band": "auto_match",
+      "evidence_bundle": {
+        "bundle_version": "0.1",
+        "lead_id": "lead_CryptoKing_MX",
+        "task_type": "advisor_review",
+        "generated_at": "2026-04-24T15:36:50Z",
+        "evidence": [
+          {
+            "evidence_id": "ev_CryptoKing_MX_stat",
+            "kind": "stat",
+            "source_platform": "binance",
+            "observed_at": "2026-04-24T15:36:50Z",
+            "content": {
+              "evidence_lines": [
+                "Copy-trading líder en Binance con 412 copiers activos",
+                "ROI 30d de 41.7% y Sharpe 1.82",
+                "AUM declarado $127,500 USD"
+              ],
+              "vip_features": {
+                "aum_usd": 127500.43,
+                "copier_count": 412,
+                "roi_30d": 0.4173,
+                "win_rate": 0.621
+              },
+              "kol_features": {},
+              "vip_score": 0.4521,
+              "kol_score": 0.0,
+              "identity_band": "auto_match"
+            },
+            "trust_label": "TRUSTED",
+            "source_url": "https://www.binance.com/en/copy-trading/lead-details?portfolioId=3721834591234567",
+            "claim_hint": "observational"
+          }
+        ],
+        "subject": {
+          "external_trader_id": "demo:CryptoKing_MX",
+          "source_platform": "binance",
+          "username": "CryptoKing_MX",
+          "display_name": "CryptoKing_MX",
+          "trading_profile_id": "https://www.binance.com/en/copy-trading/lead-details?portfolioId=3721834591234567"
+        },
+        "meta": {
+          "country_hint": "MX",
+          "language_hint": "es",
+          "budget_class": "ingested"
+        }
+      }
+    }
+  ],
+  "other": []
+}
