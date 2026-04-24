@@ -3,508 +3,808 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OKX LATAM · Primer test VIP/KOL — MX · Piloto interno</title>
+<title>OKX LATAM · CRM VIP/KOL · MX</title>
 <style>
-  :root {
-    --okx-black: #0a0a0a;
-    --okx-gold: #d4a85a;
-    --okx-gray-900: #1a1a1a;
-    --okx-gray-700: #333;
-    --okx-gray-500: #666;
-    --okx-gray-300: #d0d0d0;
-    --okx-gray-100: #f5f5f5;
-    --band-green: #e8f7ed;
-    --band-green-border: #2e7d32;
-    --band-yellow: #fff8e1;
-    --band-yellow-border: #c58a00;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter",
-                 "Helvetica Neue", Arial, sans-serif;
-    background: var(--okx-gray-100);
-    color: var(--okx-black);
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
-  header.hero {
-    background: var(--okx-black);
-    color: #fff;
-    border-radius: 12px;
-    padding: 28px 24px;
-    margin-bottom: 24px;
-    position: relative;
-    overflow: hidden;
-  }
-  header.hero::after {
-    content: "";
-    position: absolute; top: 0; right: 0; width: 120px; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(212,168,90,0.18));
-  }
-  header.hero .eyebrow {
-    color: var(--okx-gold);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 600;
-  }
-  header.hero h1 { margin: 8px 0 4px; font-size: 28px; line-height: 1.2; }
-  header.hero .subtitle { color: var(--okx-gray-300); font-size: 14px; }
-  header.hero .meta {
-    margin-top: 16px;
-    font-size: 12px;
-    color: var(--okx-gray-300);
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+:root {
+  --bg: #0A0B0D;
+  --surface: #141519;
+  --surface-2: #1C1E24;
+  --surface-3: #262933;
+  --border: #23252D;
+  --border-strong: #353844;
+  --text: #F4F4F6;
+  --text-2: #A0A3AE;
+  --text-3: #6B6E7A;
+  --accent: #D4FF3F;
+  --accent-ink: #0A0B0D;
+  --accent-hover: #BFE834;
+  --tier-fire: #FFB547;
+  --tier-lightning: #7DD3FC;
+  --tier-base: #6B6E7A;
+  --green: #3BCE82;
+  --yellow: #F2C94C;
+  --red: #FF5C5C;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --shadow: 0 10px 40px rgba(0,0,0,0.55);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--text);
+  font-family: var(--font);
+  font-size: 14px; line-height: 1.45;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+body { min-height: 100vh; display: flex; flex-direction: column; }
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; color: inherit; }
 
-  section { background: #fff; border-radius: 12px; padding: 20px 20px;
-             margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-  section h2 { font-size: 18px; margin: 0 0 12px; }
-  section p.lead-copy { color: var(--okx-gray-700); margin: 0 0 8px; font-size: 14px; }
+/* -------- Top bar -------- */
+.topbar {
+  position: sticky; top: 0; z-index: 40;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center; gap: 20px;
+  padding: 12px 20px;
+  background: rgba(10,11,13,0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand .logo {
+  width: 26px; height: 26px; display: grid; place-items: center;
+  background: var(--accent); color: var(--accent-ink);
+  border-radius: 5px; font-weight: 800; font-size: 16px;
+  transform: rotate(45deg);
+}
+.brand .logo span { transform: rotate(-45deg); }
+.brand .wordmark { font-weight: 700; letter-spacing: -0.01em; font-size: 14px; }
+.brand .wordmark em { color: var(--text-2); font-style: normal; font-weight: 500; }
+.brand .env-pill {
+  font-size: 10px; padding: 3px 8px; border-radius: 999px;
+  background: var(--surface-2); color: var(--text-2);
+  text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
+  border: 1px solid var(--border);
+}
+.search {
+  position: relative;
+  max-width: 440px; width: 100%; justify-self: center;
+}
+.search input {
+  width: 100%; padding: 9px 12px 9px 34px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--text); font-size: 13px;
+  outline: none; transition: border-color .15s;
+}
+.search input:focus { border-color: var(--accent); }
+.search::before {
+  content: "⌕"; position: absolute; left: 12px; top: 50%;
+  transform: translateY(-50%); color: var(--text-3); font-size: 14px;
+}
+.view-switch {
+  display: inline-flex; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+}
+.view-switch button {
+  background: transparent; color: var(--text-2); border: 0;
+  padding: 7px 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
+  transition: all .15s;
+}
+.view-switch button.active { background: var(--accent); color: var(--accent-ink); }
 
-  .kpi-grid {
-    display: grid; gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
-  .kpi {
-    background: var(--okx-gray-100); border-radius: 10px;
-    padding: 14px 14px; border-left: 3px solid var(--okx-gold);
-  }
-  .kpi .label { font-size: 11px; color: var(--okx-gray-500);
-                 text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
-  .kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
-  .kpi .sub { font-size: 11px; color: var(--okx-gray-500); margin-top: 2px; }
+/* -------- Filter bar -------- */
+.filters {
+  position: sticky; top: 51px; z-index: 30;
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 10px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 10px; font-size: 12px; font-weight: 500;
+  background: var(--surface); color: var(--text-2);
+  border: 1px solid var(--border); border-radius: 999px;
+  cursor: pointer; transition: all .1s;
+}
+.chip.active { background: var(--text); color: var(--accent-ink); border-color: var(--text); }
+.chip .count { font-size: 10px; opacity: .7; }
+.filters select {
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 6px 10px; font-size: 12px;
+  appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%236B6E7A' stroke-width='1.5' fill='none'/></svg>");
+  background-repeat: no-repeat; background-position: right 10px center;
+  padding-right: 26px;
+}
+.filters .spacer { flex: 1; }
+.filters .count-out { font-size: 12px; color: var(--text-3); }
 
-  .ajuste {
-    background: #fff7e6;
-    border-left: 4px solid var(--okx-gold);
-    padding: 14px 16px; border-radius: 8px;
-    font-size: 14px; color: var(--okx-gray-900);
-  }
-  .ajuste strong { display: block; margin-bottom: 4px; color: var(--okx-gray-900); }
+/* -------- KPI strip -------- */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0,1fr));
+  gap: 10px;
+  padding: 16px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.kpi {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 12px 14px;
+  position: relative;
+}
+.kpi .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+              color: var(--text-3); font-weight: 600; }
+.kpi .value { font-size: 22px; font-weight: 700; margin-top: 6px; letter-spacing: -0.01em; }
+.kpi .sub { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+.kpi.accent::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--accent); border-top-left-radius: var(--radius-lg);
+  border-bottom-left-radius: var(--radius-lg);
+}
+.ajuste-bar {
+  margin: 0 20px 12px;
+  background: linear-gradient(180deg, rgba(212,255,63,0.08), rgba(212,255,63,0.02));
+  border: 1px solid rgba(212,255,63,0.25);
+  border-radius: var(--radius-lg);
+  padding: 12px 16px;
+  font-size: 13px; color: var(--text);
+}
+.ajuste-bar strong { color: var(--accent); font-weight: 700; margin-right: 6px; }
 
-  table.leads {
-    width: 100%; border-collapse: collapse; font-size: 13px;
-    margin-top: 8px;
-  }
-  table.leads thead th {
-    text-align: left; font-size: 11px; text-transform: uppercase;
-    color: var(--okx-gray-500); letter-spacing: 0.06em;
-    padding: 8px 10px; border-bottom: 1px solid var(--okx-gray-300);
-    font-weight: 600;
-  }
-  table.leads tbody td {
-    padding: 12px 10px; vertical-align: top;
-    border-bottom: 1px solid var(--okx-gray-100);
-  }
-  table.leads tr.band-green { background: var(--band-green); }
-  table.leads tr.band-yellow { background: var(--band-yellow); }
-  table.leads tr.band-green td:first-child { border-left: 3px solid var(--band-green-border); }
-  table.leads tr.band-yellow td:first-child { border-left: 3px solid var(--band-yellow-border); }
+/* -------- Main / Table -------- */
+main { flex: 1; padding: 0 20px 80px; }
+.view.hidden { display: none; }
 
-  .col-name { min-width: 160px; }
-  .name-wrap { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .country { font-size: 11px; color: var(--okx-gray-500); margin-top: 2px; }
-  .badge {
-    font-size: 10px; padding: 2px 6px; border-radius: 999px;
-    font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
-  }
-  .badge-real { background: #e3f2fd; color: #0d47a1; }
-  .badge-sim { background: #eeeeee; color: var(--okx-gray-700); }
-  .col-tier { white-space: nowrap; font-weight: 600; }
-  .col-score { text-align: center; width: 90px; }
-  .score-pill {
-    display: inline-block; padding: 6px 12px; border-radius: 999px;
-    background: var(--okx-black); color: var(--okx-gold);
-    font-weight: 700; font-size: 16px; min-width: 48px;
-  }
-  .breakdown { font-size: 11px; color: var(--okx-gray-500); margin-top: 4px; }
-  .col-conf { white-space: nowrap; font-size: 12px; }
-  .col-evidence ul { margin: 0; padding-left: 16px; }
-  .col-evidence li { margin-bottom: 2px; }
-  .col-action a { color: var(--okx-black); font-weight: 600; white-space: nowrap; }
-  .muted { color: var(--okx-gray-500); }
+table.crm {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+table.crm thead th {
+  position: sticky; top: 217px; z-index: 10;
+  text-align: left; font-size: 10px; text-transform: uppercase;
+  color: var(--text-3); letter-spacing: 0.08em; font-weight: 600;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+table.crm tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background .1s;
+  cursor: pointer;
+}
+table.crm tbody tr:hover { background: var(--surface); }
+table.crm tbody tr.selected {
+  background: var(--surface-2);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+table.crm tbody td {
+  padding: 12px;
+  vertical-align: middle;
+}
+.cell-candidate { min-width: 220px; }
+.cell-candidate .handle { font-weight: 600; font-size: 14px; }
+.cell-candidate .meta { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+.country-flag {
+  font-size: 11px; padding: 1px 6px; border-radius: 3px;
+  background: var(--surface-2); color: var(--text-2);
+  text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600;
+}
+.badge {
+  display: inline-block;
+  font-size: 10px; padding: 2px 7px; border-radius: 999px;
+  font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  margin-left: 6px;
+}
+.badge-real { background: rgba(59,206,130,0.14); color: var(--green); }
+.badge-sim { background: rgba(107,110,122,0.16); color: var(--text-2); }
+.badge-kol { background: rgba(125,211,252,0.14); color: var(--tier-lightning); }
+.tier-cell { white-space: nowrap; font-weight: 600; font-size: 12px; }
+.tier-fire { color: var(--tier-fire); }
+.tier-lightning { color: var(--tier-lightning); }
+.tier-base { color: var(--tier-base); }
+.score-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 10px; border-radius: 999px;
+  background: var(--accent); color: var(--accent-ink);
+  font-weight: 700; font-size: 12px;
+  min-width: 48px; justify-content: center;
+}
+.score-pill.s-mid { background: var(--surface-3); color: var(--text); }
+.score-pill.s-low { background: var(--surface-2); color: var(--text-2); }
+.score-breakdown { font-size: 10px; color: var(--text-3); margin-top: 3px; }
+.platform-chip {
+  display: inline-block;
+  font-size: 11px; padding: 2px 8px; border-radius: 4px;
+  background: var(--surface-2); color: var(--text-2);
+  border: 1px solid var(--border);
+}
+.identity-chip { font-size: 11px; color: var(--text-2); }
+.status-chip {
+  display: inline-block;
+  font-size: 11px; padding: 2px 8px; border-radius: 999px;
+  background: var(--surface-2); color: var(--text-2);
+  border: 1px solid var(--border);
+}
+.status-nuevo { background: var(--surface-2); color: var(--text-2); }
+.status-contactado { background: rgba(125,211,252,0.14); color: var(--tier-lightning); border-color: rgba(125,211,252,0.3); }
+.status-respondio { background: rgba(59,206,130,0.14); color: var(--green); border-color: rgba(59,206,130,0.3); }
+.status-descartado { background: rgba(255,92,92,0.1); color: var(--red); border-color: rgba(255,92,92,0.25); }
+.status-cerrado { background: rgba(212,255,63,0.14); color: var(--accent); border-color: rgba(212,255,63,0.3); }
+.cell-evidence {
+  color: var(--text-2); font-size: 12px;
+  max-width: 360px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
 
-  .outreach-box {
-    background: var(--okx-gray-100); border-radius: 8px;
-    padding: 16px 18px; font-family: "SF Pro Text", -apple-system, sans-serif;
-    font-size: 14px; color: var(--okx-gray-900); line-height: 1.6;
-    border-left: 3px solid var(--okx-gold);
-  }
+/* -------- Kanban -------- */
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 14px; margin-top: 16px;
+}
+.kanban-col {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.kanban-col .col-header {
+  padding: 12px 14px;
+  background: var(--surface-2);
+  font-size: 13px; font-weight: 600;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.kanban-col[data-bucket="fire"] .col-header { color: var(--tier-fire); }
+.kanban-col[data-bucket="lightning"] .col-header { color: var(--tier-lightning); }
+.kanban-col[data-bucket="base"] .col-header { color: var(--tier-base); }
+.col-count {
+  background: var(--bg); color: var(--text-2);
+  padding: 1px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600;
+}
+.col-body {
+  padding: 10px; display: flex; flex-direction: column; gap: 8px;
+  max-height: calc(100vh - 320px); overflow-y: auto;
+}
+.card {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 12px; cursor: pointer;
+  transition: transform .08s, border-color .1s;
+}
+.card:hover { border-color: var(--border-strong); transform: translateY(-1px); }
+.card.selected { border-color: var(--accent); }
+.card .card-title { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.card .handle { font-weight: 600; font-size: 13px; }
+.card .card-meta { font-size: 11px; color: var(--text-3); margin-top: 4px; }
+.card .card-ev {
+  font-size: 11px; color: var(--text-2); margin-top: 8px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
-  .note {
-    background: #f0f4ff; border-radius: 8px; padding: 12px 14px;
-    font-size: 12px; color: var(--okx-gray-700);
-  }
-  .note strong { color: var(--okx-black); }
+/* -------- Drawer -------- */
+.drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: 540px; max-width: 100vw;
+  background: var(--surface); border-left: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transform: translateX(100%); transition: transform .24s cubic-bezier(.4,0,.2,1);
+  display: flex; flex-direction: column;
+  z-index: 50;
+}
+.drawer.open { transform: translateX(0); }
+.drawer-header {
+  padding: 18px 20px; border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 10px;
+}
+.drawer-header .d-name { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+.drawer-header .d-meta { font-size: 12px; color: var(--text-3); margin-top: 4px;
+                         display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.drawer-close {
+  background: transparent; border: 0; color: var(--text-2);
+  width: 32px; height: 32px; border-radius: var(--radius);
+  font-size: 22px; line-height: 1;
+}
+.drawer-close:hover { background: var(--surface-2); color: var(--text); }
+.drawer-body { flex: 1; overflow-y: auto; padding: 20px; }
+.d-section { margin-bottom: 24px; }
+.d-section h3 {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-3); font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.stat {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 10px 12px;
+}
+.stat .label { font-size: 10px; text-transform: uppercase; color: var(--text-3);
+               letter-spacing: 0.06em; font-weight: 600; }
+.stat .value { font-size: 16px; font-weight: 700; margin-top: 3px; }
+.ev-list { list-style: none; padding: 0; margin: 0; }
+.ev-list li {
+  padding: 10px 12px; background: var(--surface-2);
+  border-radius: var(--radius); border-left: 2px solid var(--accent);
+  font-size: 13px; color: var(--text); margin-bottom: 6px;
+}
+.draft {
+  width: 100%; min-height: 180px;
+  background: var(--surface-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 12px; font-family: var(--font); font-size: 13px;
+  line-height: 1.6; resize: vertical; outline: none;
+}
+.draft:focus { border-color: var(--accent); }
+.draft-actions { display: flex; gap: 8px; margin-top: 10px; }
+.btn {
+  padding: 8px 14px; border-radius: var(--radius); font-weight: 600; font-size: 12px;
+  border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
+  transition: all .1s;
+}
+.btn:hover { background: var(--surface-3); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn-ghost { background: transparent; }
+.btn-danger { color: var(--red); border-color: rgba(255,92,92,0.4); }
+.btn-danger:hover { background: rgba(255,92,92,0.08); }
+.status-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.status-row .btn.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.notes {
+  width: 100%; min-height: 90px;
+  background: var(--surface-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 10px 12px; font-family: var(--font); font-size: 13px;
+  resize: vertical; outline: none;
+}
+.notes:focus { border-color: var(--accent); }
+a.profile-link {
+  color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 600;
+}
+a.profile-link:hover { text-decoration: underline; }
 
-  footer { margin-top: 24px; text-align: center; color: var(--okx-gray-500); font-size: 11px; }
+/* -------- Toast -------- */
+.toast {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: var(--text); color: var(--accent-ink);
+  padding: 10px 16px; border-radius: var(--radius); font-size: 13px; font-weight: 600;
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+  z-index: 60; box-shadow: var(--shadow);
+}
+.toast.show { opacity: 1; }
 
-  @media (max-width: 720px) {
-    table.leads { font-size: 12px; }
-    table.leads thead { display: none; }
-    table.leads, table.leads tbody, table.leads tr, table.leads td { display: block; width: 100%; }
-    table.leads tr {
-      margin-bottom: 12px; border-radius: 10px; padding: 6px 2px;
-      border: 1px solid var(--okx-gray-300);
-    }
-    table.leads tr.band-green { border-left: 4px solid var(--band-green-border); }
-    table.leads tr.band-yellow { border-left: 4px solid var(--band-yellow-border); }
-    table.leads tbody td { border-bottom: none; padding: 6px 12px; }
-    .col-name strong { font-size: 15px; }
-  }
+/* -------- Footer -------- */
+footer {
+  padding: 20px; border-top: 1px solid var(--border);
+  color: var(--text-3); font-size: 11px; text-align: center;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 920px) {
+  .topbar { grid-template-columns: 1fr auto; gap: 10px; padding: 10px 14px; }
+  .search { grid-column: 1 / -1; justify-self: stretch; max-width: none; }
+  .filters { padding: 8px 14px; }
+  .kpi-strip { grid-template-columns: repeat(2, 1fr); padding: 12px 14px; }
+  main { padding: 0 14px 60px; }
+  table.crm thead { display: none; }
+  table.crm tbody tr { display: block; padding: 12px 0; }
+  table.crm tbody td { display: block; padding: 3px 12px; }
+  table.crm tbody td.cell-candidate { padding-top: 10px; }
+  .cell-evidence { white-space: normal; max-width: none; }
+  .kanban { grid-template-columns: 1fr; }
+  .drawer { width: 100vw; }
+  .ajuste-bar { margin: 0 14px 12px; }
+  table.crm thead th { top: auto; position: static; }
+}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header class="hero">
-    <div class="eyebrow">OKX LATAM · Growth · Primer test</div>
-    <h1>Pipeline VIP &amp; KOL — muestra MX</h1>
-    <div class="subtitle">
-      Para: Karina Caudillo · De: Anthony Chávez &amp; Martín Guido
-    </div>
-    <div class="meta">
-      <span>Generado 24-Apr-2026 15:16 UTC</span>
-      <span>·</span>
-      <span>Piloto interno — sin envío a traders, sin infra OKX</span>
-    </div>
-  </header>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo"><span>◆</span></span>
+    <span class="wordmark">OKX <em>· LATAM CRM</em></span>
+    <span class="env-pill">Piloto interno</span>
+  </div>
+  <div class="search">
+    <input id="q" type="search" placeholder="Buscar por handle, país, evidencia…" autocomplete="off">
+  </div>
+  <div class="view-switch">
+    <button data-view="table" class="active">Tabla</button>
+    <button data-view="kanban">Kanban</button>
+  </div>
+</header>
 
-  <section>
-    <h2>Qué estás viendo</h2>
-    <p class="lead-copy">
-      Este es el <strong>primer output end-to-end</strong> del sistema que
-      reemplaza el scouting manual de Martín. El pipeline jala candidatos
-      de leaderboards de exchanges competidores, los cruza con redes
-      sociales, los puntúa con reglas deterministas (sin IA decidiendo
-      prioridad comercial) y entrega una lista lista para contactar.
-    </p>
-    <p class="lead-copy">
-      Este es el <strong>primer corte del radar automatizado</strong>.
-      El batch combina <strong>1 lead real</strong> del fixture de
-      validación con <strong>7 candidatos de piloto interno</strong>
-      con perfiles realistas MX, para que veas cómo se ve un lote
-      completo antes de encender el pull en vivo (en paralelo avanza
-      la aprobación de Legal para correr en infra OKX).
-    </p>
-  </section>
+<nav class="filters">
+  <div id="country-chips" style="display:flex; gap:6px; flex-wrap:wrap;"></div>
+  <select id="platform-filter"><option value="">Todas plataformas</option></select>
+  <select id="tier-filter">
+    <option value="">Todos los tiers</option>
+    <option value="fire">🔥 VIP</option>
+    <option value="lightning">⚡ Oportunidad</option>
+    <option value="base">🧊 Base</option>
+  </select>
+  <select id="status-filter">
+    <option value="">Cualquier estado</option>
+    <option value="nuevo">Nuevo</option>
+    <option value="contactado">Contactado</option>
+    <option value="respondio">Respondió</option>
+    <option value="descartado">Descartado</option>
+    <option value="cerrado">Cerrado</option>
+  </select>
+  <div class="spacer"></div>
+  <div class="count-out" id="count-out">—</div>
+</nav>
 
-  <section>
-    <h2>Resumen ejecutivo · 5 KPIs</h2>
-    <div class="kpi-grid">
-      <div class="kpi">
-        <div class="label">Candidatos MX</div>
-        <div class="value">8</div>
-        <div class="sub">en esta corrida</div>
+<section class="kpi-strip">
+  <div class="kpi accent"><div class="label">Candidatos MX</div><div class="value" id="kpi-mx">—</div><div class="sub">en esta corrida</div></div>
+  <div class="kpi"><div class="label">🔥 VIP</div><div class="value" id="kpi-fire">—</div><div class="sub">listos para Martín</div></div>
+  <div class="kpi"><div class="label">⚡ Oportunidad</div><div class="value" id="kpi-lightning">—</div><div class="sub">revisión ligera</div></div>
+  <div class="kpi"><div class="label">Puntaje promedio</div><div class="value" id="kpi-avg">—</div><div class="sub">calidad del batch</div></div>
+  <div class="kpi"><div class="label">AUM Potencial</div><div class="value" id="kpi-pipeline">—</div><div class="sub">estimando 10% de conversión</div></div>
+</section>
+<div class="ajuste-bar" id="ajuste-bar"><strong>Foco de la semana ·</strong> <span id="ajuste-text">—</span></div>
+
+<main>
+  <div id="table-view" class="view">
+    <table class="crm">
+      <thead>
+        <tr>
+          <th>Candidato</th>
+          <th>Tier</th>
+          <th>Puntaje</th>
+          <th>Plataforma</th>
+          <th>Identidad</th>
+          <th>Estado</th>
+          <th>Evidencia</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div id="kanban-view" class="view hidden">
+    <div class="kanban">
+      <div class="kanban-col" data-bucket="fire">
+        <div class="col-header">🔥 VIP <span class="col-count" id="k-fire">0</span></div>
+        <div class="col-body" id="kcol-fire"></div>
       </div>
-      <div class="kpi">
-        <div class="label">Tier VIP 🔥</div>
-        <div class="value">2</div>
-        <div class="sub">listos para Martín</div>
+      <div class="kanban-col" data-bucket="lightning">
+        <div class="col-header">⚡ Oportunidad <span class="col-count" id="k-lightning">0</span></div>
+        <div class="col-body" id="kcol-lightning"></div>
       </div>
-      <div class="kpi">
-        <div class="label">Oportunidad ⚡</div>
-        <div class="value">3</div>
-        <div class="sub">revisión ligera</div>
-      </div>
-      <div class="kpi">
-        <div class="label">Puntaje promedio</div>
-        <div class="value">65/100</div>
-        <div class="sub">calidad del batch</div>
-      </div>
-      <div class="kpi">
-        <div class="label">AUM Potencial</div>
-        <div class="value">$108,250</div>
-        <div class="sub">estimando 10% de conversión</div>
+      <div class="kanban-col" data-bucket="base">
+        <div class="col-header">🧊 Base <span class="col-count" id="k-base">0</span></div>
+        <div class="col-body" id="kcol-base"></div>
       </div>
     </div>
-    <div style="margin-top: 14px;" class="ajuste">
-      <strong>🎯 Ajuste de la semana</strong>
-      Foco de la semana: cerrar el pull live para elevar la calidad del batch — hoy 87% del lote MX queda en 🟡 Posible Match y consume tiempo de verificación de Martín. Prioridad: desbloquear Apify en infra OKX.
-    </div>
-  </section>
+  </div>
+</main>
 
-  <section>
-    <h2>Top candidatos MX · 8</h2>
-    <p class="lead-copy">
-      Ordenados por puntaje. Los filas 🟢 son identidad confirmada, las
-      🟡 tienen señales mixtas y requieren una confirmación rápida antes
-      de enviar DM.
-    </p>
-    <div style="overflow-x:auto">
-      <table class="leads">
-        <thead>
-          <tr>
-            <th>Candidato</th>
-            <th>Tier</th>
-            <th>Puntaje</th>
-            <th>Identidad</th>
-            <th>Evidencia</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          
-    <tr class="band-yellow">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>KarenCryptoGDL</strong>
-          <span class="badge badge-sim">piloto</span>
-        </div>
-        <div class="country">MX · KOL</div>
-      </td>
-      <td class="col-tier">🔥 VIP</td>
-      <td class="col-score">
-        <div class="score-pill">83</div>
-        <div class="breakdown">VIP 18 · Audiencia 82</div>
-      </td>
-      <td class="col-conf">🟡 Posible Match</td>
-      <td class="col-evidence"><ul><li>YouTube 112K suscriptores, contenido de educación cripto en MX</li><li>IG 24.1K followers con engagement 4.1%, reels semanales</li><li>Reviewed Binance y Bybit; OKX mencionado solo 1x en 2025</li></ul></td>
-      <td class="col-action"><span class="muted">—</span></td>
-    </tr>
-    
-    <tr class="band-yellow">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>alex.cdmx.futures</strong>
-          <span class="badge badge-sim">piloto</span>
-        </div>
-        <div class="country">MX · VIP+KOL</div>
-      </td>
-      <td class="col-tier">🔥 VIP</td>
-      <td class="col-score">
-        <div class="score-pill">81</div>
-        <div class="breakdown">VIP 47 · Audiencia 81</div>
-      </td>
-      <td class="col-conf">🟡 Posible Match</td>
-      <td class="col-evidence"><ul><li>IG @alex.cdmx.futures con 38.2K followers, engagement 3.4%</li><li>Copy-leader Binance: 674 copiers, ROI 30d 29.8%, Sharpe 1.65</li><li>Menciona &quot;salir de Binance&quot; en 3 posts recientes (oportunidad)</li></ul></td>
-      <td class="col-action"><span class="muted">—</span></td>
-    </tr>
-    
-    <tr class="band-yellow">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>DonBitcoinMX</strong>
-          <span class="badge badge-sim">piloto</span>
-        </div>
-        <div class="country">MX · KOL</div>
-      </td>
-      <td class="col-tier">⚡ Oportunidad</td>
-      <td class="col-score">
-        <div class="score-pill">79</div>
-        <div class="breakdown">VIP 10 · Audiencia 78</div>
-      </td>
-      <td class="col-conf">🟡 Posible Match</td>
-      <td class="col-evidence"><ul><li>X/Twitter 46K followers, mayormente MX (Spanish locale 88%)</li><li>Engagement 1.8% — base orgánica, no inflada</li><li>Habla de fees y slippage, audiencia trader-heavy</li></ul></td>
-      <td class="col-action"><span class="muted">—</span></td>
-    </tr>
-    
-    <tr class="band-yellow">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>ValeTradesMX</strong>
-          <span class="badge badge-sim">piloto</span>
-        </div>
-        <div class="country">MX · VIP+KOL</div>
-      </td>
-      <td class="col-tier">⚡ Oportunidad</td>
-      <td class="col-score">
-        <div class="score-pill">66</div>
-        <div class="breakdown">VIP 47 · Audiencia 65</div>
-      </td>
-      <td class="col-conf">🟡 Posible Match</td>
-      <td class="col-evidence"><ul><li>Copy-leader Binance: 512 copiers, ROI 30d 36.1%, AUM $210K USD</li><li>Telegram canal público con ~1.2K miembros, post diario</li><li>Perfil IG verificado con bio &quot;crypto trader MX — DMs abiertos&quot;</li></ul></td>
-      <td class="col-action"><span class="muted">—</span></td>
-    </tr>
-    
-    <tr class="band-yellow">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>MonterreyBull</strong>
-          <span class="badge badge-sim">piloto</span>
-        </div>
-        <div class="country">MX · VIP+KOL</div>
-      </td>
-      <td class="col-tier">⚡ Oportunidad</td>
-      <td class="col-score">
-        <div class="score-pill">66</div>
-        <div class="breakdown">VIP 45 · Audiencia 65</div>
-      </td>
-      <td class="col-conf">🟡 Posible Match</td>
-      <td class="col-evidence"><ul><li>Bybit leaderboard top-50 Perpetuos, pnl 30d $64K USD</li><li>Twitter @mtyBull 8.9K followers, hilos técnicos de BTC/SOL</li><li>Avatar y nombre consistentes en 3 plataformas</li></ul></td>
-      <td class="col-action"><span class="muted">—</span></td>
-    </tr>
-    
-    <tr class="band-yellow">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>CancunPerpMX</strong>
-          <span class="badge badge-sim">piloto</span>
-        </div>
-        <div class="country">MX · VIP+KOL</div>
-      </td>
-      <td class="col-tier">🧊 Base</td>
-      <td class="col-score">
-        <div class="score-pill">52</div>
-        <div class="breakdown">VIP 38 · Audiencia 52</div>
-      </td>
-      <td class="col-conf">🟡 Posible Match</td>
-      <td class="col-evidence"><ul><li>Bitget copy-trading líder, 298 copiers, ROI 30d 22.7%</li><li>Max drawdown -11% (perfil conservador)</li><li>Usa hashtag #OKXMX en 2 posts de abril (señal de interés)</li></ul></td>
-      <td class="col-action"><span class="muted">—</span></td>
-    </tr>
-    
-    <tr class="band-yellow">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>PueblaScalper</strong>
-          <span class="badge badge-sim">piloto</span>
-        </div>
-        <div class="country">MX · VIP+KOL</div>
-      </td>
-      <td class="col-tier">🧊 Base</td>
-      <td class="col-score">
-        <div class="score-pill">51</div>
-        <div class="breakdown">VIP 44 · Audiencia 51</div>
-      </td>
-      <td class="col-conf">🟡 Posible Match</td>
-      <td class="col-evidence"><ul><li>Binance copy-leader 174 copiers, volumen 30d $2.1M USD</li><li>Sharpe 2.05, 71% win rate — perfil cuantitativo</li><li>Perfil privado en redes, solo contacto por canal Telegram</li></ul></td>
-      <td class="col-action"><span class="muted">—</span></td>
-    </tr>
-    
-    <tr class="band-green">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>CryptoKing_MX</strong>
-          <span class="badge badge-real">data real</span>
-        </div>
-        <div class="country">MX · VIP</div>
-      </td>
-      <td class="col-tier">🧊 Base</td>
-      <td class="col-score">
-        <div class="score-pill">45</div>
-        <div class="breakdown">VIP 45</div>
-      </td>
-      <td class="col-conf">🟢 Identidad Confirmada</td>
-      <td class="col-evidence"><ul><li>Copy-trading líder en Binance con 412 copiers activos</li><li>ROI 30d de 41.7% y Sharpe 1.82</li><li>AUM declarado $127,500 USD</li></ul></td>
-      <td class="col-action"><a href="https://www.binance.com/en/copy-trading/lead-details?portfolioId=3721834591234567" target="_blank" rel="noopener">Ver perfil ↗</a></td>
-    </tr>
-    
-        </tbody>
-      </table>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-header">
+    <div>
+      <div class="d-name" id="d-name">—</div>
+      <div class="d-meta" id="d-meta">—</div>
     </div>
-  </section>
+    <button class="drawer-close" id="drawer-close" aria-label="Cerrar">×</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
 
-  <section>
-    <h2>Otros LATAM · 2</h2>
-    <p class="lead-copy">
-      Candidatos fuera de MX que el pipeline ya capturó en esta corrida.
-      Útiles como sanity-check: la plantilla de outreach cambia por país
-      (AR usa <em>vos</em>; el resto usa <em>tú</em>).
-    </p>
-    <div style="overflow-x:auto">
-      <table class="leads">
-        <thead>
-          <tr>
-            <th>Candidato</th>
-            <th>Tier</th>
-            <th>Puntaje</th>
-            <th>Identidad</th>
-            <th>Evidencia</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          
-    <tr class="band-green">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>BTCWhale-Bogotá</strong>
-          <span class="badge badge-real">data real</span>
+<div class="toast" id="toast">Copiado</div>
+<footer>
+  OKX LATAM · Growth Team · <span id="year">—</span> · Generado <span id="gen-at">—</span> · Sistema interno
+</footer>
+
+<script id="data" type="application/json">{"generated_at": "2026-04-24T15:36:50.579735+00:00", "generated_at_human": "24-Apr-2026 15:36 UTC", "year": 2026, "kpis": {"total_mx": 25, "total_all": 25, "tier_fire": 2, "tier_lightning": 19, "avg_score": 69, "pipeline_value": 12750, "hours_saved": 10, "ajuste": "Foco de la semana: escalar el patrón a AR y CO. La mayoría del lote MX ya entra como 🟢 Identidad Confirmada, así que abrimos segunda geografía sin sacrificar calidad."}, "leads": [{"id": "mattunchi", "nickname": "@mattunchi", "display_name": "@mattunchi", "country": "MX", "kind": "KOL", "tier_label": "🔥 VIP", "tier_emoji": "🔥", "tier_bucket": "fire", "score": 86, "vip_score": 0, "kol_score": 86, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "youtube", "profile_url": "https://www.youtube.com/@MADCRIPTOMX", "follower_count": 108000, "engagement_rate": 0.035, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["MAD Cripto MX (Mateo) en YouTube · 108,000 seguidores", "Contenido: educación crypto general y análisis de proyectos / DeFi", "Uno de los YouTubers crypto mexicanos con mayor subscriber base; historial de cobertura de nuevos exchanges; propuso contenido educativo patrocinado en Polkassembly."]}, {"id": "espaciocriptopodcast", "nickname": "@espaciocriptopodcast", "display_name": "@espaciocriptopodcast", "country": "MX", "kind": "KOL", "tier_label": "🔥 VIP", "tier_emoji": "🔥", "tier_bucket": "fire", "score": 86, "vip_score": 0, "kol_score": 86, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "youtube", "profile_url": "https://www.youtube.com/@espaciocriptopodcast", "follower_count": 62000, "engagement_rate": 0.035, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Espacio Cripto (Abraham Cobos + Lalo García) en YouTube · 62,000 seguidores", "Contenido: educación para principiantes + entrevistas Web3 LATAM", "Podcast crypto más escuchado LATAM; lanzó Startup House con StarkNet en Monterrey; alcance institucional MX alto."]}, {"id": "LunaticoCrypto", "nickname": "@LunaticoCrypto", "display_name": "@LunaticoCrypto", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 80, "vip_score": 0, "kol_score": 80, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "youtube", "profile_url": "https://www.youtube.com/@LunaticoCrypto", "follower_count": 40000, "engagement_rate": 0.035, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Lunatico Crypto en YouTube · 40,000 seguidores", "Contenido: análisis técnico, calls de mercado en vivo, trading spot/futuros MX", "Trader con calls públicas verificables; audiencia retail trader MX-centric; perfil natural para referir a OKX futuros. Verificar handle antes de outreach."]}, {"id": "criptozky", "nickname": "@criptozky", "display_name": "@criptozky", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 79, "vip_score": 0, "kol_score": 79, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "youtube", "profile_url": "https://www.youtube.com/c/YoungWolvesCripto", "follower_count": 155000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Criptozky (César Ozky Cosío) en YouTube · 155,000 seguidores", "Contenido: trading técnico + DeFi + liderazgo/negocios", "Top-50 business MX; cruza audiencia de trader y empresario — perfil institutional VIP."]}, {"id": "albertohortabtc", "nickname": "@albertohortabtc", "display_name": "@albertohortabtc", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 79, "vip_score": 0, "kol_score": 79, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@albertohortabtc", "follower_count": 234000, "engagement_rate": 0.035, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Alberto Horta en TikTok · 234,000 seguidores", "Contenido: trading técnico + forex + automatización", "Base Querétaro; founder Horta Technologies; ER 1.07% sobre 234K indica audiencia cualificada (trader activo, no retail puro)."]}, {"id": "cryptosanti", "nickname": "@cryptosanti", "display_name": "@cryptosanti", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 75, "vip_score": 0, "kol_score": 75, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@cryptosanti", "follower_count": 913000, "engagement_rate": 0.035, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Crypto Santi en TikTok · 913,000 seguidores", "Contenido: educación para principiantes + estrategias de inversión MX", "ER 1.36% sobre 913K es notablemente alto para TikTok crypto MX; conversión potencial por engagement."]}, {"id": "futurosmillonarios", "nickname": "@futurosmillonarios", "display_name": "@futurosmillonarios", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 75, "vip_score": 0, "kol_score": 75, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "youtube", "profile_url": "https://www.youtube.com/channel/UCHwDVTt8ksobbhMQXCwo0Jw", "follower_count": 382000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Futuros Millonarios en YouTube · 382,000 seguidores", "Contenido: educación crypto + memecoins + ingreso pasivo", "YT subs >380K + cobertura constante de memecoins y narrativas de ciclo; tráfico retail masivo."]}, {"id": "eduardoaranda", "nickname": "@eduardoaranda", "display_name": "@eduardoaranda", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 75, "vip_score": 0, "kol_score": 75, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@eduardoaranda", "follower_count": 208000, "engagement_rate": 0.035, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Eduardo Aranda en TikTok · 208,000 seguidores", "Contenido: educación crypto MX", "ER 1.95% más alto del top-10 MX TikTok — audiencia pequeña pero extremadamente activa, buen fit para programa de referidos."]}, {"id": "diariobitcoin", "nickname": "@diariobitcoin", "display_name": "@diariobitcoin", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 75, "vip_score": 0, "kol_score": 75, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "x", "profile_url": "https://x.com/diariobitcoin", "follower_count": 95000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["DiarioBitcoin (media) en X/Twitter · 95,000 seguidores", "Contenido: periodismo crypto hispano, cobertura MX/LATAM, regulación, exchanges", "Medio crypto hispanohablante con presencia MX; canal de placement editorial + amplificación de anuncios OKX."]}, {"id": "espejelomar", "nickname": "@espejelomar", "display_name": "@espejelomar", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 74, "vip_score": 0, "kol_score": 74, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "x", "profile_url": "https://x.com/espejelomar", "follower_count": 32000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Omar Espejel en X/Twitter · 32,000 seguidores", "Contenido: DeFi / infra Ethereum + Starknet + BTCFi", "Sr. DevAdvocate Starknet Foundation, host de 'Hacia Afuera' podcast técnico; puerta a developer ecosystem MX para narrativas institucionales."]}, {"id": "abrahamcr", "nickname": "@abrahamcr", "display_name": "@abrahamcr", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 71, "vip_score": 0, "kol_score": 71, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "x", "profile_url": "https://x.com/abrahamcr", "follower_count": 23000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Abraham Cobos en X/Twitter · 23,000 seguidores", "Contenido: Web3 / DeFi / builder-voice LATAM", "Co-founder/CEO de Bando y host de Espacio Cripto; voz builder MX con reach a devs y founders (audiencia técnica que OKX no captura vía TikTok)."]}, {"id": "cryptojuancho", "nickname": "@cryptojuancho", "display_name": "@cryptojuancho", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 71, "vip_score": 0, "kol_score": 71, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@cryptojuancho", "follower_count": 1300000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Crypto Juancho en TikTok · 1,300,000 seguidores", "Contenido: educación para principiantes — portfolio, risk management, long-term", "TikToker crypto MX 1M+; audiencia joven retail — match con perfil VIP que OKX busca escalar en LATAM."]}, {"id": "LOReBitcoin", "nickname": "@LOReBitcoin", "display_name": "@LOReBitcoin", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 71, "vip_score": 0, "kol_score": 71, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "x", "profile_url": "https://x.com/lorebitcoin", "follower_count": 8300, "engagement_rate": 0.035, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Lorena Ortiz en X/Twitter · 8,300 seguidores", "Contenido: bitcoin maximalist / educación CDMX / eventos comunidad", "Co-founder del Bitcoin Embassy Bar CDMX; hub físico de la comunidad BTC MX; influencia offline."]}, {"id": "elocadenas", "nickname": "@elocadenas", "display_name": "@elocadenas", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 70, "vip_score": 0, "kol_score": 70, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "x", "profile_url": "https://x.com/elocadenas", "follower_count": 18500, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Eloísa Cadenas en X/Twitter · 18,500 seguidores", "Contenido: análisis macro / regulación / CBDC / academia", "PhD UNAM, founder CryptoFintech, co-founder PXO (primer stablecoin MX), columnista Cointelegraph; legitimidad regulatoria ante CNBV."]}, {"id": "jorgecuervo1641", "nickname": "@jorgecuervo1641", "display_name": "@jorgecuervo1641", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 69, "vip_score": 0, "kol_score": 69, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "youtube", "profile_url": "https://www.youtube.com/@jorgecuervo1641", "follower_count": 42000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Jorge Cuervo (CryptoAnálisis) en YouTube · 42,000 seguidores", "Contenido: trading técnico — AT/AF de bitcoin y alts", "Perfil trader técnico dedicado — audiencia que hace >1 trade/semana, alto LTV para exchange."]}, {"id": "danielvogel", "nickname": "@danielvogel", "display_name": "@danielvogel", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 67, "vip_score": 0, "kol_score": 67, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "x", "profile_url": "https://x.com/danielvogel", "follower_count": 35000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Daniel Vogel (Bitso CEO & co-founder) en X/Twitter · 35,000 seguidores", "Contenido: policy LATAM, remesas, rails stablecoin, adopción institucional", "Founder crypto MX más visible; su señal mueve conversación builder/VIP. Competitor-adjacent — relación más de ecosystem que de conversión directa."]}, {"id": "ricardoramirezmx", "nickname": "@ricardoramirezmx", "display_name": "@ricardoramirezmx", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 66, "vip_score": 0, "kol_score": 66, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@ricardoramirezmx", "follower_count": 1300000, "engagement_rate": 0.005, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Ricardo Ramírez (RickyCryptoJunkie) en TikTok · 1,300,000 seguidores", "Contenido: trading técnico — TA de BTC/ETH/altcoins", "Multiplataforma (TikTok 1.3M + IG 81K + YT 51K); trader serio, fit perfecto para producto futures/perpetuals de OKX."]}, {"id": "pachorro", "nickname": "@pachorro", "display_name": "@pachorro", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 65, "vip_score": 0, "kol_score": 65, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "x", "profile_url": "https://x.com/pachorro", "follower_count": 28000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Pablo González (Bitso co-founder) en X/Twitter · 28,000 seguidores", "Contenido: product/regulation commentary, LATAM crypto adoption, stablecoins", "Co-founder de Bitso; alta credibilidad con founders y builders MX. Competitor-adjacent — handle con cuidado, alto valor de relación estratégica."]}, {"id": "androxmx", "nickname": "@androxmx", "display_name": "@androxmx", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 62, "vip_score": 0, "kol_score": 62, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@androxmx", "follower_count": 409000, "engagement_rate": 0.005, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Androxmx en TikTok · 409,000 seguidores", "Contenido: gaming + crypto crossover", "Streamer gaming con interés crypto — audiencia gamer MX (overlapping con GameFi/NFT de OKX)."]}, {"id": "jjchagerben", "nickname": "@jjchagerben", "display_name": "@jjchagerben", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 62, "vip_score": 0, "kol_score": 62, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@jjchagerben.753", "follower_count": 517000, "engagement_rate": 0.005, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["JJ Chagerben en TikTok · 517,000 seguidores", "Contenido: bitcoin maximalist / libertad financiera / macro", "Autor ('Invertir en Bitcoin o Esclavitud'); audiencia adulta MX, complementa el mix TikTok con perfil maximalist."]}, {"id": "CriptoMEXsegun", "nickname": "@CriptoMEXsegun", "display_name": "@CriptoMEXsegun", "country": "MX", "kind": "KOL", "tier_label": "⚡ Oportunidad", "tier_emoji": "⚡", "tier_bucket": "lightning", "score": 61, "vip_score": 0, "kol_score": 61, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "x", "profile_url": "https://x.com/CriptoMEXsegun", "follower_count": 15000, "engagement_rate": 0.015, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["CriptoMEX en X/Twitter · 15,000 seguidores", "Contenido: análisis altcoins y entradas/salidas de mercado", "Marca MX específica; nicho altcoin-calls — uso directo del producto spot+perps de OKX."]}, {"id": "gabocryptoken", "nickname": "@gabocryptoken", "display_name": "@gabocryptoken", "country": "MX", "kind": "KOL", "tier_label": "🧊 Base", "tier_emoji": "🧊", "tier_bucket": "base", "score": 58, "vip_score": 0, "kol_score": 58, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@gabocryptoken", "follower_count": 226000, "engagement_rate": 0.005, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Gabo CrypToken en TikTok · 226,000 seguidores", "Contenido: educación blockchain + mentoría 1:1", "Opera mentorías pagadas — ya monetiza audiencia, conversión a programa KOL/revshare más probable."]}, {"id": "adriangolub", "nickname": "@adriangolub", "display_name": "@adriangolub", "country": "MX", "kind": "KOL", "tier_label": "🧊 Base", "tier_emoji": "🧊", "tier_bucket": "base", "score": 58, "vip_score": 0, "kol_score": 58, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@adriangolub", "follower_count": 211000, "engagement_rate": 0.005, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Adrián Golub en TikTok · 211,000 seguidores", "Contenido: trading técnico MX", "Top-10 HiveInfluence MX crypto TikTok; cobertura conservadora."]}, {"id": "arivera_97", "nickname": "@arivera.97", "display_name": "@arivera.97", "country": "MX", "kind": "KOL", "tier_label": "🧊 Base", "tier_emoji": "🧊", "tier_bucket": "base", "score": 58, "vip_score": 0, "kol_score": 58, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "real_kol", "primary_platform": "tiktok", "profile_url": "https://www.tiktok.com/@arivera.97", "follower_count": 221000, "engagement_rate": 0.005, "aum_usd": null, "copier_count": null, "roi_30d": null, "win_rate": null, "evidence": ["Alejandro Rivera en TikTok · 221,000 seguidores", "Contenido: trading crypto MX", "Top-10 HiveInfluence MX; candidato de segundo tier para escalamiento del pipeline."]}, {"id": "CryptoKing_MX", "nickname": "CryptoKing_MX", "display_name": "CryptoKing_MX", "country": "MX", "kind": "VIP", "tier_label": "🧊 Base", "tier_emoji": "🧊", "tier_bucket": "base", "score": 45, "vip_score": 45, "kol_score": 0, "confidence_label": "🟢 Identidad Confirmada", "confidence_band": "green", "identity_band": "auto_match", "origin": "fixture", "primary_platform": "binance", "profile_url": "https://www.binance.com/en/copy-trading/lead-details?portfolioId=3721834591234567", "follower_count": null, "engagement_rate": null, "aum_usd": 127500.43, "copier_count": 412, "roi_30d": 0.4173, "win_rate": 0.621, "evidence": ["Copy-trading líder en Binance con 412 copiers activos", "ROI 30d de 41.7% y Sharpe 1.82", "AUM declarado $127,500 USD"]}], "sample_outreach_mx": "Hola @mattunchi,\n\nHe visto tus números — MAD Cripto MX (Mateo) en YouTube · 108,000 seguidores; Contenido: educación crypto general y análisis de proyectos / DeFi.\n\nEn OKX LATAM tenemos un programa VIP con comisiones escalonadas y account manager dedicado. ¿Te late conectar 15 min?\n\n— Martín / OKX LATAM"}</script>
+<script>
+(function(){
+  const DATA = JSON.parse(document.getElementById('data').textContent);
+  const STATUS_KEY = 'okx_crm_status_v1';
+  const NOTES_KEY = 'okx_crm_notes_v1';
+  const DRAFTS_KEY = 'okx_crm_drafts_v1';
+
+  // ---------- state ----------
+  const state = {
+    view: 'table',
+    country: 'ALL',
+    platform: '',
+    tier: '',
+    status: '',
+    q: '',
+    selectedId: null,
+  };
+  function loadMap(key){ try { return JSON.parse(localStorage.getItem(key)) || {}; } catch(e){ return {}; } }
+  function saveMap(key, obj){ localStorage.setItem(key, JSON.stringify(obj)); }
+  const statusMap = loadMap(STATUS_KEY);
+  const notesMap = loadMap(NOTES_KEY);
+  const draftsMap = loadMap(DRAFTS_KEY);
+
+  // ---------- helpers ----------
+  const fmtNum = n => n==null ? '—' : (n>=1000 ? (n/1000).toFixed(n>=10000?0:1)+'K' : String(n));
+  const fmtMoney = n => n==null ? '—' : '$'+Math.round(n).toLocaleString('en-US');
+  const fmtPct = n => n==null ? '—' : (n*100).toFixed(0)+'%';
+  const esc = s => (s==null ? '' : String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])));
+  const statusOf = id => statusMap[id] || 'nuevo';
+  const statusLabel = { nuevo:'Nuevo', contactado:'Contactado', respondio:'Respondió', descartado:'Descartado', cerrado:'Cerrado' };
+
+  function scoreClass(s){ if(s>=80) return ''; if(s>=60) return 's-mid'; return 's-low'; }
+
+  function filtered() {
+    const q = state.q.trim().toLowerCase();
+    return DATA.leads.filter(l => {
+      if (state.country !== 'ALL' && l.country !== state.country) return false;
+      if (state.platform && l.primary_platform !== state.platform) return false;
+      if (state.tier && l.tier_bucket !== state.tier) return false;
+      if (state.status && statusOf(l.id) !== state.status) return false;
+      if (q) {
+        const hay = (l.nickname+' '+l.display_name+' '+l.country+' '+(l.evidence||[]).join(' ')).toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+  }
+
+  // ---------- rendering ----------
+  function renderKPIs() {
+    const k = DATA.kpis;
+    document.getElementById('kpi-mx').textContent = k.total_mx;
+    document.getElementById('kpi-fire').textContent = k.tier_fire;
+    document.getElementById('kpi-lightning').textContent = k.tier_lightning;
+    document.getElementById('kpi-avg').textContent = k.avg_score + '/100';
+    document.getElementById('kpi-pipeline').textContent = fmtMoney(k.pipeline_value);
+    document.getElementById('ajuste-text').textContent = k.ajuste;
+    document.getElementById('year').textContent = DATA.year;
+    document.getElementById('gen-at').textContent = DATA.generated_at_human;
+  }
+
+  function renderCountryChips() {
+    const by = {};
+    DATA.leads.forEach(l => { by[l.country] = (by[l.country]||0)+1; });
+    const el = document.getElementById('country-chips');
+    const entries = [['ALL', 'Todos', DATA.leads.length], ...Object.entries(by).map(([c,n]) => [c, c, n])];
+    el.innerHTML = entries.map(([val, label, n]) =>
+      `<button class="chip ${state.country===val?'active':''}" data-c="${esc(val)}">${esc(label)} <span class="count">${n}</span></button>`
+    ).join('');
+    el.querySelectorAll('.chip').forEach(b => {
+      b.addEventListener('click', () => { state.country = b.dataset.c; render(); });
+    });
+  }
+
+  function renderPlatformSelect() {
+    const set = new Set(DATA.leads.map(l => l.primary_platform).filter(Boolean));
+    const sel = document.getElementById('platform-filter');
+    sel.innerHTML = '<option value="">Todas plataformas</option>' +
+      [...set].map(p => `<option value="${esc(p)}">${esc(p)}</option>`).join('');
+  }
+
+  function rowHTML(l) {
+    const breakdown = (l.vip_score>0 && l.kol_score>0) ?
+      `VIP ${l.vip_score} · Audiencia ${l.kol_score}` :
+      (l.kol_score > l.vip_score ? `Audiencia ${l.kol_score}` : `VIP ${l.vip_score}`);
+    const originBadge = l.origin === 'fixture' ?
+      '<span class="badge badge-real">real</span>' :
+      (l.origin === 'real_kol' ? '<span class="badge badge-kol">KOL real</span>' :
+       '<span class="badge badge-sim">piloto</span>');
+    const st = statusOf(l.id);
+    return `
+      <tr data-id="${esc(l.id)}" class="${state.selectedId===l.id?'selected':''}">
+        <td class="cell-candidate">
+          <div class="handle">${esc(l.display_name)} ${originBadge}</div>
+          <div class="meta"><span class="country-flag">${esc(l.country)}</span> · ${esc(l.kind)}</div>
+        </td>
+        <td class="tier-cell tier-${l.tier_bucket}">${esc(l.tier_label)}</td>
+        <td>
+          <span class="score-pill ${scoreClass(l.score)}">${l.score}</span>
+          <div class="score-breakdown">${esc(breakdown)}</div>
+        </td>
+        <td><span class="platform-chip">${esc(l.primary_platform||'—')}</span></td>
+        <td><span class="identity-chip">${esc(l.confidence_label)}</span></td>
+        <td><span class="status-chip status-${st}">${statusLabel[st]}</span></td>
+        <td class="cell-evidence" title="${esc((l.evidence||[]).join(' • '))}">${esc((l.evidence||[])[0]||'—')}</td>
+      </tr>`;
+  }
+
+  function renderTable() {
+    const rows = filtered();
+    document.getElementById('tbody').innerHTML = rows.map(rowHTML).join('') ||
+      '<tr><td colspan="7" style="text-align:center; padding:60px 20px; color:var(--text-3)">☕ Sin resultados con estos filtros.</td></tr>';
+    document.getElementById('count-out').textContent = `${rows.length} de ${DATA.leads.length} leads`;
+    document.querySelectorAll('#tbody tr[data-id]').forEach(tr => {
+      tr.addEventListener('click', () => openDrawer(tr.dataset.id));
+    });
+  }
+
+  function cardHTML(l) {
+    const originBadge = l.origin === 'fixture' ?
+      '<span class="badge badge-real">real</span>' :
+      (l.origin === 'real_kol' ? '<span class="badge badge-kol">KOL real</span>' :
+       '<span class="badge badge-sim">piloto</span>');
+    return `
+      <div class="card ${state.selectedId===l.id?'selected':''}" data-id="${esc(l.id)}">
+        <div class="card-title">
+          <div>
+            <div class="handle">${esc(l.display_name)}</div>
+            <div class="card-meta"><span class="country-flag">${esc(l.country)}</span> · ${esc(l.primary_platform||'—')} ${originBadge}</div>
+          </div>
+          <span class="score-pill ${scoreClass(l.score)}">${l.score}</span>
         </div>
-        <div class="country">CO · VIP</div>
-      </td>
-      <td class="col-tier">🧊 Base</td>
-      <td class="col-score">
-        <div class="score-pill">57</div>
-        <div class="breakdown">VIP 57</div>
-      </td>
-      <td class="col-conf">🟢 Identidad Confirmada</td>
-      <td class="col-evidence"><ul><li>Copy-trading líder en Binance con 1248 copiers activos</li><li>ROI 30d de 31.5% y Sharpe 2.11</li><li>AUM declarado $312,000 USD</li></ul></td>
-      <td class="col-action"><a href="https://www.binance.com/en/copy-trading/lead-details?portfolioId=9920123456789012" target="_blank" rel="noopener">Ver perfil ↗</a></td>
-    </tr>
-    
-    <tr class="band-green">
-      <td class="col-name">
-        <div class="name-wrap">
-          <strong>Lucia-BA-Futures</strong>
-          <span class="badge badge-real">data real</span>
+        <div class="card-ev">${esc((l.evidence||[])[0]||'—')}</div>
+      </div>`;
+  }
+
+  function renderKanban() {
+    const rows = filtered();
+    const buckets = { fire:[], lightning:[], base:[] };
+    rows.forEach(l => buckets[l.tier_bucket]?.push(l));
+    ['fire','lightning','base'].forEach(b => {
+      document.getElementById('kcol-'+b).innerHTML = buckets[b].map(cardHTML).join('') ||
+        `<div style="color:var(--text-3); font-size:12px; padding:12px; text-align:center">Sin candidatos</div>`;
+      document.getElementById('k-'+b).textContent = buckets[b].length;
+    });
+    document.querySelectorAll('.card[data-id]').forEach(c => {
+      c.addEventListener('click', () => openDrawer(c.dataset.id));
+    });
+    document.getElementById('count-out').textContent = `${rows.length} de ${DATA.leads.length} leads`;
+  }
+
+  function render() {
+    renderCountryChips();
+    if (state.view === 'table') {
+      document.getElementById('table-view').classList.remove('hidden');
+      document.getElementById('kanban-view').classList.add('hidden');
+      renderTable();
+    } else {
+      document.getElementById('table-view').classList.add('hidden');
+      document.getElementById('kanban-view').classList.remove('hidden');
+      renderKanban();
+    }
+  }
+
+  // ---------- drawer ----------
+  function buildOutreach(l) {
+    const firstName = l.display_name.split(/[\s._]/)[0].replace(/@/g,'');
+    const cap = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+    const evLines = (l.evidence||[]).slice(0,2).join('; ');
+    const hookPrefix = l.country === 'MX' ? 'He visto tus números' : 'Vi tu perfil';
+    // Country-aware closing
+    const offers = {
+      MX: 'En OKX LATAM tenemos un programa VIP con comisiones escalonadas y account manager dedicado. ¿Te late conectar 15 min?',
+      AR: 'Desde OKX LATAM te escribo — tenemos un programa VIP con comisiones por volumen y soporte directo. ¿Te copa una llamada?',
+      CO: 'En OKX LATAM manejamos un programa VIP con fees por volumen y atención personalizada. ¿Podemos coordinar una charla breve?',
+      CL: 'En OKX LATAM tenemos un programa VIP con estructura de comisiones preferencial. ¿Podríamos conversar brevemente?',
+      PE: 'En OKX LATAM contamos con un programa VIP con comisiones por volumen y soporte dedicado. ¿Tendrías 15 minutos?',
+    };
+    const offer = offers[l.country] || offers.MX;
+    return `Hola ${cap},\n\n${hookPrefix} — ${evLines}.\n\n${offer}\n\n— Martín / OKX LATAM`;
+  }
+
+  function renderStats(l) {
+    const s = [];
+    if (l.aum_usd) s.push({ label:'AUM', value:fmtMoney(l.aum_usd) });
+    if (l.copier_count) s.push({ label:'Copiers', value:fmtNum(l.copier_count) });
+    if (l.roi_30d != null) s.push({ label:'ROI 30d', value:fmtPct(l.roi_30d) });
+    if (l.win_rate != null) s.push({ label:'Win rate', value:fmtPct(l.win_rate) });
+    if (l.follower_count) s.push({ label:'Followers', value:fmtNum(l.follower_count) });
+    if (l.engagement_rate != null) s.push({ label:'Engagement', value:fmtPct(l.engagement_rate) });
+    s.push({ label:'Puntaje', value: l.score+'/100' });
+    s.push({ label:'Plataforma', value: l.primary_platform || '—' });
+    return s.map(x => `<div class="stat"><div class="label">${esc(x.label)}</div><div class="value">${esc(x.value)}</div></div>`).join('');
+  }
+
+  function openDrawer(id) {
+    const l = DATA.leads.find(x => x.id === id);
+    if (!l) return;
+    state.selectedId = id;
+    const draft = draftsMap[id] || buildOutreach(l);
+    const note = notesMap[id] || '';
+    const st = statusOf(id);
+    document.getElementById('d-name').textContent = l.display_name;
+    document.getElementById('d-meta').innerHTML =
+      `<span class="country-flag">${esc(l.country)}</span>` +
+      `<span class="tier-${l.tier_bucket}">${esc(l.tier_label)}</span>` +
+      `<span class="identity-chip">${esc(l.confidence_label)}</span>` +
+      (l.profile_url ? `<a class="profile-link" href="${esc(l.profile_url)}" target="_blank" rel="noopener">Ver perfil ↗</a>` : '');
+    document.getElementById('drawer-body').innerHTML = `
+      <div class="d-section">
+        <h3>Métricas</h3>
+        <div class="stat-grid">${renderStats(l)}</div>
+      </div>
+      <div class="d-section">
+        <h3>Evidencia</h3>
+        <ul class="ev-list">
+          ${(l.evidence||[]).map(e => `<li>${esc(e)}</li>`).join('')}
+        </ul>
+      </div>
+      <div class="d-section">
+        <h3>Borrador de outreach · tono ${esc(l.country)}</h3>
+        <textarea class="draft" id="draft-ta">${esc(draft)}</textarea>
+        <div class="draft-actions">
+          <button class="btn btn-primary" id="copy-draft">Copiar</button>
+          <button class="btn" id="regen-draft">Regenerar</button>
         </div>
-        <div class="country">AR · Base</div>
-      </td>
-      <td class="col-tier">🧊 Base</td>
-      <td class="col-score">
-        <div class="score-pill">34</div>
-        <div class="breakdown">VIP 34</div>
-      </td>
-      <td class="col-conf">🟢 Identidad Confirmada</td>
-      <td class="col-evidence"><ul><li>Copy-trading líder en Binance con 89 copiers activos</li><li>ROI 30d de 28.4% y Sharpe 1.41</li><li>AUM declarado $52,300 USD</li></ul></td>
-      <td class="col-action"><a href="https://www.binance.com/en/copy-trading/lead-details?portfolioId=4891204857482000" target="_blank" rel="noopener">Ver perfil ↗</a></td>
-    </tr>
-    
-        </tbody>
-      </table>
-    </div>
-  </section>
+      </div>
+      <div class="d-section">
+        <h3>Estado</h3>
+        <div class="status-row" id="status-row">
+          ${['nuevo','contactado','respondio','descartado','cerrado'].map(s =>
+            `<button class="btn ${st===s?'active':''}" data-st="${s}">${statusLabel[s]}</button>`).join('')}
+        </div>
+      </div>
+      <div class="d-section">
+        <h3>Notas de Martín</h3>
+        <textarea class="notes" id="notes-ta" placeholder="Ej: Ya lo vi en LinkedIn, intentaré por Telegram…">${esc(note)}</textarea>
+      </div>
+    `;
+    document.getElementById('drawer').classList.add('open');
+    document.getElementById('drawer').setAttribute('aria-hidden','false');
 
-  <section>
-    <h2>Ejemplo de borrador MX · tono <em>tú</em></h2>
-    <p class="lead-copy">
-      Este es el borrador que el sistema pre-carga para Martín. Martín
-      lo edita si quiere y lo envía <strong>manualmente</strong> —
-      nunca automatizado, para evitar bans y mantener toque humano.
-    </p>
-    <div class="outreach-box">
-      Hola Karencryptogdl,<br><br>He visto tus números — YouTube 112K suscriptores, contenido de educación cripto en MX; IG 24.1K followers con engagement 4.1%, reels semanales.<br><br>En OKX LATAM tenemos un programa VIP con comisiones escalonadas y account manager dedicado. ¿Te late conectar 15 min?<br><br>— Martín / OKX LATAM
-    </div>
-    <div class="note" style="margin-top: 12px;">
-      <strong>Por qué funciona:</strong> registro MX nativo (“te late”
-      como cierre casual), evidencia concreta con los números reales del
-      trader, y call to action con ventana de tiempo acotada (“esta
-      semana”). Nada de español neutro ni de anglicismos que matan
-      credibilidad en DM frío.
-    </div>
-  </section>
+    // bind events
+    document.getElementById('copy-draft').addEventListener('click', () => {
+      const txt = document.getElementById('draft-ta').value;
+      draftsMap[id] = txt; saveMap(DRAFTS_KEY, draftsMap);
+      navigator.clipboard.writeText(txt).then(() => toast('Copiado al portapapeles'));
+    });
+    document.getElementById('regen-draft').addEventListener('click', () => {
+      document.getElementById('draft-ta').value = buildOutreach(l);
+      delete draftsMap[id]; saveMap(DRAFTS_KEY, draftsMap);
+      toast('Borrador regenerado');
+    });
+    document.getElementById('draft-ta').addEventListener('input', e => {
+      draftsMap[id] = e.target.value; saveMap(DRAFTS_KEY, draftsMap);
+    });
+    document.getElementById('notes-ta').addEventListener('input', e => {
+      notesMap[id] = e.target.value; saveMap(NOTES_KEY, notesMap);
+    });
+    document.querySelectorAll('#status-row .btn').forEach(b => {
+      b.addEventListener('click', () => {
+        statusMap[id] = b.dataset.st; saveMap(STATUS_KEY, statusMap);
+        render();
+        document.querySelectorAll('#status-row .btn').forEach(x => x.classList.toggle('active', x===b));
+        toast('Estado: '+statusLabel[b.dataset.st]);
+      });
+    });
+    render();
+  }
+  function closeDrawer() {
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('drawer').setAttribute('aria-hidden','true');
+    state.selectedId = null;
+    render();
+  }
+  function toast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(window._toastT);
+    window._toastT = setTimeout(() => t.classList.remove('show'), 1600);
+  }
 
-  <section>
-    <h2>Próximos pasos</h2>
-    <ol style="padding-left: 20px; margin: 0;">
-      <li style="margin-bottom: 6px;">
-        Firma de Legal para correr Apify en infra OKX y desbloquear pull
-        live semanal.
-      </li>
-      <li style="margin-bottom: 6px;">
-        Martín valida los 3 leads 🟢 reales de esta corrida y envía el
-        primer DM para medir tasa de respuesta MX.
-      </li>
-      <li style="margin-bottom: 6px;">
-        Segunda corrida en 7 días con Apify live + reporte con los
-        mismos 5 KPIs para que tengas serie de tiempo.
-      </li>
-      <li>
-        Extender a AR y CO una vez el batch MX cierre primer ciclo.
-      </li>
-    </ol>
-  </section>
+  // ---------- events ----------
+  document.getElementById('q').addEventListener('input', e => { state.q = e.target.value; render(); });
+  document.getElementById('platform-filter').addEventListener('change', e => { state.platform = e.target.value; render(); });
+  document.getElementById('tier-filter').addEventListener('change', e => { state.tier = e.target.value; render(); });
+  document.getElementById('status-filter').addEventListener('change', e => { state.status = e.target.value; render(); });
+  document.querySelectorAll('.view-switch button').forEach(b => {
+    b.addEventListener('click', () => {
+      state.view = b.dataset.view;
+      document.querySelectorAll('.view-switch button').forEach(x => x.classList.toggle('active', x===b));
+      render();
+    });
+  });
+  document.getElementById('drawer-close').addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 
-  <footer>
-    OKX LATAM · Growth Team · 2026<br>
-    Sistema interno — distribución restringida a equipo regional.
-  </footer>
-</div>
+  // ---------- init ----------
+  renderKPIs();
+  renderPlatformSelect();
+  render();
+})();
+</script>
 </body>
 </html>
