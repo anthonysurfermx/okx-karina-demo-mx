@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OKX LATAM · Primer test VIP/KOL — MX · Dry-run</title>
+<style>
+  :root {
+    --okx-black: #0a0a0a;
+    --okx-gold: #d4a85a;
+    --okx-gray-900: #1a1a1a;
+    --okx-gray-700: #333;
+    --okx-gray-500: #666;
+    --okx-gray-300: #d0d0d0;
+    --okx-gray-100: #f5f5f5;
+    --band-green: #e8f7ed;
+    --band-green-border: #2e7d32;
+    --band-yellow: #fff8e1;
+    --band-yellow-border: #c58a00;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter",
+                 "Helvetica Neue", Arial, sans-serif;
+    background: var(--okx-gray-100);
+    color: var(--okx-black);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+  header.hero {
+    background: var(--okx-black);
+    color: #fff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::after {
+    content: "";
+    position: absolute; top: 0; right: 0; width: 120px; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212,168,90,0.18));
+  }
+  header.hero .eyebrow {
+    color: var(--okx-gold);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+  }
+  header.hero h1 { margin: 8px 0 4px; font-size: 28px; line-height: 1.2; }
+  header.hero .subtitle { color: var(--okx-gray-300); font-size: 14px; }
+  header.hero .meta {
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--okx-gray-300);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  section { background: #fff; border-radius: 12px; padding: 20px 20px;
+             margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  section h2 { font-size: 18px; margin: 0 0 12px; }
+  section p.lead-copy { color: var(--okx-gray-700); margin: 0 0 8px; font-size: 14px; }
+
+  .kpi-grid {
+    display: grid; gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  .kpi {
+    background: var(--okx-gray-100); border-radius: 10px;
+    padding: 14px 14px; border-left: 3px solid var(--okx-gold);
+  }
+  .kpi .label { font-size: 11px; color: var(--okx-gray-500);
+                 text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+  .kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+  .kpi .sub { font-size: 11px; color: var(--okx-gray-500); margin-top: 2px; }
+
+  .ajuste {
+    background: #fff7e6;
+    border-left: 4px solid var(--okx-gold);
+    padding: 14px 16px; border-radius: 8px;
+    font-size: 14px; color: var(--okx-gray-900);
+  }
+  .ajuste strong { display: block; margin-bottom: 4px; color: var(--okx-gray-900); }
+
+  table.leads {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+    margin-top: 8px;
+  }
+  table.leads thead th {
+    text-align: left; font-size: 11px; text-transform: uppercase;
+    color: var(--okx-gray-500); letter-spacing: 0.06em;
+    padding: 8px 10px; border-bottom: 1px solid var(--okx-gray-300);
+    font-weight: 600;
+  }
+  table.leads tbody td {
+    padding: 12px 10px; vertical-align: top;
+    border-bottom: 1px solid var(--okx-gray-100);
+  }
+  table.leads tr.band-green { background: var(--band-green); }
+  table.leads tr.band-yellow { background: var(--band-yellow); }
+  table.leads tr.band-green td:first-child { border-left: 3px solid var(--band-green-border); }
+  table.leads tr.band-yellow td:first-child { border-left: 3px solid var(--band-yellow-border); }
+
+  .col-name { min-width: 160px; }
+  .name-wrap { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .country { font-size: 11px; color: var(--okx-gray-500); margin-top: 2px; }
+  .badge {
+    font-size: 10px; padding: 2px 6px; border-radius: 999px;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .badge-real { background: #e3f2fd; color: #0d47a1; }
+  .badge-sim { background: #eeeeee; color: var(--okx-gray-700); }
+  .col-tier { white-space: nowrap; font-weight: 600; }
+  .col-score { text-align: center; width: 90px; }
+  .score-pill {
+    display: inline-block; padding: 6px 12px; border-radius: 999px;
+    background: var(--okx-black); color: var(--okx-gold);
+    font-weight: 700; font-size: 16px; min-width: 48px;
+  }
+  .breakdown { font-size: 11px; color: var(--okx-gray-500); margin-top: 4px; }
+  .col-conf { white-space: nowrap; font-size: 12px; }
+  .col-evidence ul { margin: 0; padding-left: 16px; }
+  .col-evidence li { margin-bottom: 2px; }
+  .col-action a { color: var(--okx-black); font-weight: 600; white-space: nowrap; }
+  .muted { color: var(--okx-gray-500); }
+
+  .outreach-box {
+    background: var(--okx-gray-100); border-radius: 8px;
+    padding: 16px 18px; font-family: "SF Pro Text", -apple-system, sans-serif;
+    font-size: 14px; color: var(--okx-gray-900); line-height: 1.6;
+    border-left: 3px solid var(--okx-gold);
+  }
+
+  .note {
+    background: #f0f4ff; border-radius: 8px; padding: 12px 14px;
+    font-size: 12px; color: var(--okx-gray-700);
+  }
+  .note strong { color: var(--okx-black); }
+
+  footer { margin-top: 24px; text-align: center; color: var(--okx-gray-500); font-size: 11px; }
+
+  @media (max-width: 720px) {
+    table.leads { font-size: 12px; }
+    table.leads thead { display: none; }
+    table.leads, table.leads tbody, table.leads tr, table.leads td { display: block; width: 100%; }
+    table.leads tr {
+      margin-bottom: 12px; border-radius: 10px; padding: 6px 2px;
+      border: 1px solid var(--okx-gray-300);
+    }
+    table.leads tr.band-green { border-left: 4px solid var(--band-green-border); }
+    table.leads tr.band-yellow { border-left: 4px solid var(--band-yellow-border); }
+    table.leads tbody td { border-bottom: none; padding: 6px 12px; }
+    .col-name strong { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">OKX LATAM · Growth · Primer test</div>
+    <h1>Pipeline VIP &amp; KOL — muestra MX</h1>
+    <div class="subtitle">
+      Para: Karina Caudillo · De: Anthony Chávez &amp; Martín Guido
+    </div>
+    <div class="meta">
+      <span>Generado 24-Apr-2026 15:02 UTC</span>
+      <span>·</span>
+      <span>Dry-run — sin envío a traders, sin infra OKX</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Qué estás viendo</h2>
+    <p class="lead-copy">
+      Este es el <strong>primer output end-to-end</strong> del sistema que
+      reemplaza el scouting manual de Martín. El pipeline jala candidatos
+      de leaderboards de exchanges competidores, los cruza con redes
+      sociales, los puntúa con reglas deterministas (sin IA decidiendo
+      prioridad comercial) y entrega una lista lista para contactar.
+    </p>
+    <p class="lead-copy">
+      Estamos en <strong>Fase 0</strong>: el scraping de competidores
+      todavía no corre en infra OKX (pendiente de firma de Legal). Esta
+      muestra combina <strong>3 leads reales</strong> del fixture de
+      validación con <strong>7 candidatos dry-run</strong> con perfiles
+      realistas de MX, para que veas cómo se verá un batch completo
+      cuando encendamos el pull live.
+    </p>
+  </section>
+
+  <section>
+    <h2>Resumen ejecutivo · 5 KPIs</h2>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="label">Candidatos MX</div>
+        <div class="value">8</div>
+        <div class="sub">en esta corrida</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Tier VIP 🔥</div>
+        <div class="value">2</div>
+        <div class="sub">listos para Martín</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Oportunidad ⚡</div>
+        <div class="value">3</div>
+        <div class="sub">revisión ligera</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Puntaje promedio</div>
+        <div class="value">65/100</div>
+        <div class="sub">calidad del batch</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Pipeline AUM potencial</div>
+        <div class="value">$108,250</div>
+        <div class="sub">10% de capture asumido</div>
+      </div>
+    </div>
+    <div style="margin-top: 14px;" class="ajuste">
+      <strong>🎯 Ajuste de la semana</strong>
+      87% de los candidatos MX caen en 🟡 Posible Match. Próxima semana: conectar pull live de Apify para subir la confianza a 🟢 y reducir el trabajo de verificación de Martín.
+    </div>
+  </section>
+
+  <section>
+    <h2>Top candidatos MX · 8</h2>
+    <p class="lead-copy">
+      Ordenados por puntaje. Los filas 🟢 son identidad confirmada, las
+      🟡 tienen señales mixtas y requieren una confirmación rápida antes
+      de enviar DM.
+    </p>
+    <div style="overflow-x:auto">
+      <table class="leads">
+        <thead>
+          <tr>
+            <th>Candidato</th>
+            <th>Tier</th>
+            <th>Puntaje</th>
+            <th>Confianza</th>
+            <th>Evidencia</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr class="band-yellow">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>KarenCryptoGDL</strong>
+          <span class="badge badge-sim">dry-run</span>
+        </div>
+        <div class="country">MX · KOL</div>
+      </td>
+      <td class="col-tier">🔥 VIP</td>
+      <td class="col-score">
+        <div class="score-pill">83</div>
+        <div class="breakdown">VIP 18 · Audiencia 82</div>
+      </td>
+      <td class="col-conf">🟡 Posible Match</td>
+      <td class="col-evidence"><ul><li>YouTube 112K suscriptores, contenido de educación cripto en MX</li><li>IG 24.1K followers con engagement 4.1%, reels semanales</li><li>Reviewed Binance y Bybit; OKX mencionado solo 1x en 2025</li></ul></td>
+      <td class="col-action"><span class="muted">—</span></td>
+    </tr>
+    
+    <tr class="band-yellow">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>alex.cdmx.futures</strong>
+          <span class="badge badge-sim">dry-run</span>
+        </div>
+        <div class="country">MX · VIP+KOL</div>
+      </td>
+      <td class="col-tier">🔥 VIP</td>
+      <td class="col-score">
+        <div class="score-pill">81</div>
+        <div class="breakdown">VIP 47 · Audiencia 81</div>
+      </td>
+      <td class="col-conf">🟡 Posible Match</td>
+      <td class="col-evidence"><ul><li>IG @alex.cdmx.futures con 38.2K followers, engagement 3.4%</li><li>Copy-leader Binance: 674 copiers, ROI 30d 29.8%, Sharpe 1.65</li><li>Menciona “salir de Binance” en 3 posts recientes (oportunidad)</li></ul></td>
+      <td class="col-action"><span class="muted">—</span></td>
+    </tr>
+    
+    <tr class="band-yellow">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>DonBitcoinMX</strong>
+          <span class="badge badge-sim">dry-run</span>
+        </div>
+        <div class="country">MX · KOL</div>
+      </td>
+      <td class="col-tier">⚡ Oportunidad</td>
+      <td class="col-score">
+        <div class="score-pill">79</div>
+        <div class="breakdown">VIP 10 · Audiencia 78</div>
+      </td>
+      <td class="col-conf">🟡 Posible Match</td>
+      <td class="col-evidence"><ul><li>X/Twitter 46K followers, mayormente MX (Spanish locale 88%)</li><li>Engagement 1.8% — base orgánica, no inflada</li><li>Habla de fees y slippage, audiencia trader-heavy</li></ul></td>
+      <td class="col-action"><span class="muted">—</span></td>
+    </tr>
+    
+    <tr class="band-yellow">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>ValeTradesMX</strong>
+          <span class="badge badge-sim">dry-run</span>
+        </div>
+        <div class="country">MX · VIP</div>
+      </td>
+      <td class="col-tier">⚡ Oportunidad</td>
+      <td class="col-score">
+        <div class="score-pill">66</div>
+        <div class="breakdown">VIP 47 · Audiencia 65</div>
+      </td>
+      <td class="col-conf">🟡 Posible Match</td>
+      <td class="col-evidence"><ul><li>Copy-leader Binance: 512 copiers, ROI 30d 36.1%, AUM $210K USD</li><li>Telegram canal público con ~1.2K miembros, post diario</li><li>Perfil IG verificado con bio “crypto trader MX — DMs abiertos”</li></ul></td>
+      <td class="col-action"><span class="muted">—</span></td>
+    </tr>
+    
+    <tr class="band-yellow">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>MonterreyBull</strong>
+          <span class="badge badge-sim">dry-run</span>
+        </div>
+        <div class="country">MX · VIP</div>
+      </td>
+      <td class="col-tier">⚡ Oportunidad</td>
+      <td class="col-score">
+        <div class="score-pill">66</div>
+        <div class="breakdown">VIP 45 · Audiencia 65</div>
+      </td>
+      <td class="col-conf">🟡 Posible Match</td>
+      <td class="col-evidence"><ul><li>Bybit leaderboard top-50 Perpetuos, pnl 30d $64K USD</li><li>Twitter @mtyBull 8.9K followers, hilos técnicos de BTC/SOL</li><li>Avatar y nombre consistentes en 3 plataformas</li></ul></td>
+      <td class="col-action"><span class="muted">—</span></td>
+    </tr>
+    
+    <tr class="band-yellow">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>CancunPerpMX</strong>
+          <span class="badge badge-sim">dry-run</span>
+        </div>
+        <div class="country">MX · VIP</div>
+      </td>
+      <td class="col-tier">🧊 Base</td>
+      <td class="col-score">
+        <div class="score-pill">52</div>
+        <div class="breakdown">VIP 38 · Audiencia 52</div>
+      </td>
+      <td class="col-conf">🟡 Posible Match</td>
+      <td class="col-evidence"><ul><li>Bitget copy-trading líder, 298 copiers, ROI 30d 22.7%</li><li>Max drawdown −11% (perfil conservador)</li><li>Usa hashtag #OKXMX en 2 posts de abril (señal de interés)</li></ul></td>
+      <td class="col-action"><span class="muted">—</span></td>
+    </tr>
+    
+    <tr class="band-yellow">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>PueblaScalper</strong>
+          <span class="badge badge-sim">dry-run</span>
+        </div>
+        <div class="country">MX · VIP</div>
+      </td>
+      <td class="col-tier">🧊 Base</td>
+      <td class="col-score">
+        <div class="score-pill">51</div>
+        <div class="breakdown">VIP 44 · Audiencia 51</div>
+      </td>
+      <td class="col-conf">🟡 Posible Match</td>
+      <td class="col-evidence"><ul><li>Binance copy-leader 174 copiers, volumen 30d $2.1M USD</li><li>Sharpe 2.05, 71% win rate — perfil cuantitativo</li><li>Perfil privado en redes, solo contacto por canal Telegram</li></ul></td>
+      <td class="col-action"><span class="muted">—</span></td>
+    </tr>
+    
+    <tr class="band-green">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>CryptoKing_MX</strong>
+          <span class="badge badge-real">data real</span>
+        </div>
+        <div class="country">MX · VIP</div>
+      </td>
+      <td class="col-tier">🧊 Base</td>
+      <td class="col-score">
+        <div class="score-pill">45</div>
+        <div class="breakdown">VIP 45</div>
+      </td>
+      <td class="col-conf">🟢 Identidad Confirmada</td>
+      <td class="col-evidence"><ul><li>Copy-trading líder en Binance con 412 copiers activos</li><li>ROI 30d de 41.7% y Sharpe 1.82</li><li>AUM declarado $127,500 USD</li></ul></td>
+      <td class="col-action"><a href="https://www.binance.com/en/copy-trading/lead-details?portfolioId=3721834591234567" target="_blank" rel="noopener">Ver perfil ↗</a></td>
+    </tr>
+    
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Otros LATAM · 2</h2>
+    <p class="lead-copy">
+      Candidatos fuera de MX que el pipeline ya capturó en esta corrida.
+      Útiles como sanity-check: la plantilla de outreach cambia por país
+      (AR usa <em>vos</em>; el resto usa <em>tú</em>).
+    </p>
+    <div style="overflow-x:auto">
+      <table class="leads">
+        <thead>
+          <tr>
+            <th>Candidato</th>
+            <th>Tier</th>
+            <th>Puntaje</th>
+            <th>Confianza</th>
+            <th>Evidencia</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr class="band-green">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>BTCWhale-Bogotá</strong>
+          <span class="badge badge-real">data real</span>
+        </div>
+        <div class="country">CO · VIP</div>
+      </td>
+      <td class="col-tier">🧊 Base</td>
+      <td class="col-score">
+        <div class="score-pill">57</div>
+        <div class="breakdown">VIP 57</div>
+      </td>
+      <td class="col-conf">🟢 Identidad Confirmada</td>
+      <td class="col-evidence"><ul><li>Copy-trading líder en Binance con 1248 copiers activos</li><li>ROI 30d de 31.5% y Sharpe 2.11</li><li>AUM declarado $312,000 USD</li></ul></td>
+      <td class="col-action"><a href="https://www.binance.com/en/copy-trading/lead-details?portfolioId=9920123456789012" target="_blank" rel="noopener">Ver perfil ↗</a></td>
+    </tr>
+    
+    <tr class="band-green">
+      <td class="col-name">
+        <div class="name-wrap">
+          <strong>Lucia-BA-Futures</strong>
+          <span class="badge badge-real">data real</span>
+        </div>
+        <div class="country">AR · VIP</div>
+      </td>
+      <td class="col-tier">🧊 Base</td>
+      <td class="col-score">
+        <div class="score-pill">34</div>
+        <div class="breakdown">VIP 34</div>
+      </td>
+      <td class="col-conf">🟢 Identidad Confirmada</td>
+      <td class="col-evidence"><ul><li>Copy-trading líder en Binance con 89 copiers activos</li><li>ROI 30d de 28.4% y Sharpe 1.41</li><li>AUM declarado $52,300 USD</li></ul></td>
+      <td class="col-action"><a href="https://www.binance.com/en/copy-trading/lead-details?portfolioId=4891204857482000" target="_blank" rel="noopener">Ver perfil ↗</a></td>
+    </tr>
+    
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ejemplo de borrador MX · tono <em>tú</em></h2>
+    <p class="lead-copy">
+      Este es el borrador que el sistema pre-carga para Martín. Martín
+      lo edita si quiere y lo envía <strong>manualmente</strong> —
+      nunca automatizado, para evitar bans y mantener toque humano.
+    </p>
+    <div class="outreach-box">
+      Hola Karencryptogdl,<br><br>Soy Martín de OKX LATAM. Vi tu track récord en copy-trading y me gustaría platicar 15 min de nuestro programa VIP: comisiones escalonadas, account manager dedicado en español y fees más bajos al cruzar cierto volumen mensual. Sin compromiso, solo para que lo evalúes.<br><br>¿Te late agendar esta semana? — Martín
+    </div>
+    <div class="note" style="margin-top: 12px;">
+      <strong>Por qué funciona:</strong> registro MX nativo (“te late”, “sin
+      compromiso”), evidencia concreta (“tu track récord en copy-trading”),
+      call to action claro con ventana de tiempo (“esta semana”). Nada
+      de español neutro.
+    </div>
+  </section>
+
+  <section>
+    <h2>Próximos pasos</h2>
+    <ol style="padding-left: 20px; margin: 0;">
+      <li style="margin-bottom: 6px;">
+        Firma de Legal para correr Apify en infra OKX y desbloquear pull
+        live semanal.
+      </li>
+      <li style="margin-bottom: 6px;">
+        Martín valida los 3 leads 🟢 reales de esta corrida y envía el
+        primer DM para medir tasa de respuesta MX.
+      </li>
+      <li style="margin-bottom: 6px;">
+        Segunda corrida en 7 días con Apify live + reporte con los
+        mismos 5 KPIs para que tengas serie de tiempo.
+      </li>
+      <li>
+        Extender a AR y CO una vez el batch MX cierre primer ciclo.
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    OKX LATAM · Growth Team · 2026<br>
+    Sistema interno — distribución restringida a equipo regional.
+  </footer>
+</div>
+</body>
+</html>
